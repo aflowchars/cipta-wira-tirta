@@ -46,22 +46,74 @@ class ApplicantsExport implements FromCollection, WithHeadings, WithMapping
     public function map($jobCandidate): array
     {
         return [
+            ltrim($jobCandidate->remarks,"=-"),
+            ltrim($jobCandidate->crew_code,"=-"),
+            ltrim($jobCandidate->date_of_entry,"=-"),
+            ltrim($jobCandidate->source,"=-"),
+            ltrim($jobCandidate->last_name,"=-"),
+            ltrim($jobCandidate->first_name,"=-"),
+            ltrim($jobCandidate->applied_position,"=-"),
+            ltrim($jobCandidate->department,"=-"),
+            ltrim($jobCandidate->gender,"=-"),
+            ltrim($jobCandidate->d_o_b,"=-"),
+            ltrim($jobCandidate->age,"=-"),
+            ltrim($jobCandidate->vaccination_yf,"=-"),
+            ltrim($jobCandidate->vaccination_covid_19,"=-"),
+            ltrim($jobCandidate->cid,"=-"),
+            ltrim($jobCandidate->coc,"=-"),
+            ltrim($jobCandidate->rating_able,"=-"),
+            ltrim($jobCandidate->ccm,"=-"),
+            ltrim($jobCandidate->experience,"=-"),
+            ltrim($jobCandidate->application_form,"=-"),
+            ltrim($jobCandidate->contact_no,"=-"),
+            ltrim($jobCandidate->email,"=-"),
+            ltrim($jobCandidate->interview_date,"=-"),
+            ltrim($jobCandidate->interview_by,"=-"),
+            ltrim($jobCandidate->interview_result,"=-"),
+            ltrim($jobCandidate->approved_as,"=-"),
+            ltrim($jobCandidate->status,"=-"),
             ltrim($jobCandidate->candidateInfo->getAuthor->getDisplayName() ?? '',"=-"),
             ltrim($jobCandidate->jobInfo->title,"=-"),
             ltrim($jobCandidate->message,"=-"),
             ltrim(display_date($jobCandidate->created_date),"=-"),
-            ltrim($jobCandidate->status,"=-")
+            
         ];
     }
 
     public function headings(): array
     {
         return [
+            'remarks',
+            'crew_code',
+            'date_of_entry',
+            'source',
+            'last_name',
+            'first_name',
+            'applied_position',
+            'department',
+            'gender',
+            'd.o.b',
+            'age',
+            'vaccination_yf',
+            'vaccination_covid_19',
+            'cid',
+            'coc',
+            'rating_able',
+            'ccm',
+            'experience',
+            'application_form',
+            'contact_no',
+            'email',
+            'interview_date',
+            'interview_by',
+            'interview_result',
+            'approved_as',
+            'Status',
             'Candidate',
             'Job Title',
             'Message',
             'Date Applied',
-            'Status'
+            
         ];
     }
 }

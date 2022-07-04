@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','JobController@index')->name('job.admin.index');
 Route::get('/create','JobController@create')->name('job.admin.create');
 Route::get('/edit/{id}', 'JobController@edit')->name('job.admin.edit');
+Route::post('/update','JobController@applicantsUpdate')->name('job.admin.applicants.applicantsUpdate');
 Route::post('/bulkEdit','JobController@bulkEdit')->name('job.admin.bulkEdit');
 Route::post('/store/{id}','JobController@store')->name('job.admin.store');
 Route::get('/getForSelect2','JobController@getForSelect2')->name('job.admin.getForSelect2');
@@ -17,6 +18,7 @@ Route::post('/job-type/editBulk','JobTypeController@editBulk')->name('job.admin.
 
 Route::get('/all-applicants','JobController@allApplicants')->name('job.admin.allApplicants');
 Route::get('/all-applicants/{status}/{id}','JobController@applicantsChangeStatus')->name('job.admin.applicants.changeStatus');
+Route::get('/all-applicants/edit/{id}','JobController@applicantsEdit')->name('job.admin.applicants.edit');
 Route::post('/all-applicants/bulkEdit','JobController@applicantsBulkEdit')->name('job.admin.applicants.bulkEdit');
 Route::get('/all-applicants/export','JobController@applicantsExport')->name('job.admin.applicants.export');
 

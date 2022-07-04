@@ -134,6 +134,7 @@
 
                                                         </button>
                                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="<?php echo e(route('job.admin.applicants.changeStatus', ['status' => 'edit', 'id' => $row->id])); ?>"><?php echo e(__("Edit")); ?></a>
                                                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-applied-<?php echo e($row->id); ?>"><?php echo e(__("Detail")); ?></a>
                                                             <a class="dropdown-item" href="<?php echo e(route('job.admin.applicants.changeStatus', ['status' => 'approved', 'id' => $row->id])); ?>"><?php echo e(__("Approved")); ?></a>
                                                             <a class="dropdown-item" href="<?php echo e(route('job.admin.applicants.changeStatus', ['status' => 'rejected', 'id' => $row->id])); ?>"><?php echo e(__("Rejected")); ?></a>

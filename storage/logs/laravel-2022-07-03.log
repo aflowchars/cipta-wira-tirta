@@ -1,0 +1,359 @@
+[2022-07-03 22:59:04] production.DEBUG: Message-ID: <a528c3e6844ad6c8dd270a1494607c8a@127.0.0.1>
+Date: Sun, 03 Jul 2022 22:59:04 +0000
+Subject: [Cipta Wira Tirta] Verify Register
+From: Superio <support@superio.com>
+To: failamir@admin.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            
+            <h1>Hello!</h1>
+            <p>Please click the button to verify your email address!</p>
+            <p style="text-align: center;"><a href="http://localhost:8000/email/verify/16/4403d00e2c71a600553ea3d32aa9f4201ba971a0?expires=1656892744&amp;signature=d0c486ab73d10464bc757f12276445cd87b72f8cb9199cb0208ca693284e3236" style="border-radius: 3px; color: #fff; display: inline-block; text-decoration: none; background-color: #3490dc; border-top: 10px solid #3490dc; border-right: 18px solid #3490dc; border-bottom: 10px solid #3490dc; border-left: 18px solid #3490dc;">Verify Email Address</a></p>
+            <p>If you did not create account, no further action is required.</p>
+            <p>Regards,<br>Cipta Wira Tirta</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 22:59:04] production.DEBUG: Message-ID: <ade1aacf7583691c9b0ffecf3200ff59@127.0.0.1>
+Date: Sun, 03 Jul 2022 22:59:04 +0000
+Subject: failamir@admin.com  has registered.
+From: Superio <support@superio.com>
+To: failamir@admin.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h1 style="text-align: center;">Welcome!</h1>
+                    <h3>Hello failamir@admin.com </h3>
+                    <p>Thank you for signing up with Superio! We hope you enjoy your time with us.</p>
+                    <p>Regards,</p>
+                    <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 22:59:04] production.DEBUG: Message-ID: <4d02e63214f9c873979a1ca8d3cc31d3@127.0.0.1>
+Date: Sun, 03 Jul 2022 22:59:04 +0000
+Subject: failamir@admin.com  has registered.
+From: Superio <support@superio.com>
+To: support@superio.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h3>Hello Administrator</h3>
+                    <p>We have new registration</p>
+                    <p>Full name: failamir@admin.com </p>
+                    <p>Email: failamir@admin.com</p>
+                    <p>Regards,</p>
+                    <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 22:59:04] production.INFO: Broadcasting [App\Events\PusherNotificationAdminEvent] on channels [admin-channel] with payload:
+{
+    "message": "failamir@admin.com  has been registered",
+    "avatar": "<img class=\"image-responsive\" src=\"http:\/\/localhost:8000\/images\/avatar.png\" alt=\"failamir@admin.com \">",
+    "link": "http:\/\/localhost:8000\/admin\/module\/user?s=16",
+    "idNotification": "fc74bc75-2aff-463c-83dc-2f23b1dfe3b0",
+    "socket": null
+}  
+[2022-07-03 23:00:07] production.DEBUG: Message-ID: <0597def83cc5205e11cf6f5da89294af@127.0.0.1>
+Date: Sun, 03 Jul 2022 23:00:07 +0000
+Subject: [Cipta Wira Tirta] Verify Register
+From: Superio <support@superio.com>
+To: andri@admin.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            
+            <h1>Hello!</h1>
+            <p>Please click the button to verify your email address!</p>
+            <p style="text-align: center;"><a href="http://localhost:8000/email/verify/17/c579f318201eef872ddd6921246252177229888b?expires=1656892807&amp;signature=daeb4f3ae0c01e382cce384ae3a36bc22f8d7f79e483bdf2649a44e745aaa5f1" style="border-radius: 3px; color: #fff; display: inline-block; text-decoration: none; background-color: #3490dc; border-top: 10px solid #3490dc; border-right: 18px solid #3490dc; border-bottom: 10px solid #3490dc; border-left: 18px solid #3490dc;">Verify Email Address</a></p>
+            <p>If you did not create account, no further action is required.</p>
+            <p>Regards,<br>Cipta Wira Tirta</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 23:00:07] production.DEBUG: Message-ID: <b977663766c3f8152a5972fb26bb484d@127.0.0.1>
+Date: Sun, 03 Jul 2022 23:00:07 +0000
+Subject: andri@admin.com  has registered.
+From: Superio <support@superio.com>
+To: andri@admin.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h1 style="text-align: center;">Welcome!</h1>
+                    <h3>Hello andri@admin.com </h3>
+                    <p>Thank you for signing up with Superio! We hope you enjoy your time with us.</p>
+                    <p>Regards,</p>
+                    <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 23:00:07] production.DEBUG: Message-ID: <45ad31d196d8cb25cc46795ce3bb69ac@127.0.0.1>
+Date: Sun, 03 Jul 2022 23:00:07 +0000
+Subject: andri@admin.com  has registered.
+From: Superio <support@superio.com>
+To: support@superio.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h3>Hello Administrator</h3>
+                    <p>We have new registration</p>
+                    <p>Full name: andri@admin.com </p>
+                    <p>Email: andri@admin.com</p>
+                    <p>Regards,</p>
+                    <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  
+[2022-07-03 23:00:07] production.INFO: Broadcasting [App\Events\PusherNotificationAdminEvent] on channels [admin-channel] with payload:
+{
+    "message": "andri@admin.com  has been registered",
+    "avatar": "<img class=\"image-responsive\" src=\"http:\/\/localhost:8000\/images\/avatar.png\" alt=\"andri@admin.com \">",
+    "link": "http:\/\/localhost:8000\/admin\/module\/user?s=17",
+    "idNotification": "b4eb700b-d92f-4cbd-bad4-b866df4a0d9a",
+    "socket": null
+}  
+[2022-07-03 23:16:00] production.INFO: Broadcasting [App\Events\PusherNotificationPrivateEvent] on channels [user-channel-1] with payload:
+{
+    "message": "  have applied to the job Senior Full Stack Engineer, Creator Success",
+    "avatar": "<img class=\"image-responsive\" src=\"http:\/\/localhost:8000\/images\/avatar.png\" alt=\"System Admin\">",
+    "link": "http:\/\/localhost:8000\/admin\/module\/job\/all-applicants",
+    "idNotification": "32f676b0-4ad6-462a-8b28-276532d3e2cf",
+    "userId": 1,
+    "socket": null
+}  
+[2022-07-03 23:16:00] production.DEBUG: Message-ID: <ebb4cb249d5f4976c76235a4cce97f37@127.0.0.1>
+Date: Sun, 03 Jul 2022 23:16:00 +0000
+Subject: A candidate apply for your job
+From: Superio <support@superio.com>
+To: admin@superio.test
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h3>Hello System Admin,</h3>
+                            <p>A candidate apply for your job:</p>
+                            <p>Candidate Name:  </p>
+                            <p>Message: accept. me</p>
+                            <p>Regards,</p>
+                            <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  

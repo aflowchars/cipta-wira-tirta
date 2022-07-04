@@ -130,6 +130,7 @@
                                                             {{ __("Actions") }}
                                                         </button>
                                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                                            <a class="dropdown-item" href="{{ route('job.admin.applicants.changeStatus', ['status' => 'edit', 'id' => $row->id]) }}">{{ __("Edit") }}</a>
                                                             <a class="dropdown-item" href="#" data-toggle="modal" data-target="#modal-applied-{{ $row->id }}">{{ __("Detail") }}</a>
                                                             <a class="dropdown-item" href="{{ route('job.admin.applicants.changeStatus', ['status' => 'approved', 'id' => $row->id]) }}">{{ __("Approved") }}</a>
                                                             <a class="dropdown-item" href="{{ route('job.admin.applicants.changeStatus', ['status' => 'rejected', 'id' => $row->id]) }}">{{ __("Rejected") }}</a>

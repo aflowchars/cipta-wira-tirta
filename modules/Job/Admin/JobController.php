@@ -320,18 +320,83 @@ class JobController extends AdminController
         if (empty($row)){
             return redirect()->back()->with('error', __('Item not found!'));
         }
+
+        
+        if($status == 'edit'){
+            $data = JobCandidate::find($id);
+            $user = User::find($data->candidate_id);
+            $job = Job::find($data->job_id);
+            // $data = array_merge(['crew_code' => 1234], $data);
+            // var_dump($data);die;
+            // return redirect()->back()->with('success', __('Update success!'));
+            return view('Job::admin.job.edit-applicants', compact('data','user','job'));
+            // echo 'edit';die;
+        }
+
         $old_status = $row->status;
         if($status != 'approved' && $status != 'rejected'){
             return redirect()->back()->with('error', __('Status unavailable'));
         }
+
         $row->status = $status;
         $row->save();
         //Send Notify and email
+        // if($status == 'update'){
+        //     // $request = new Request();
+        //     $request = $status;
+        //     var_dump($request);die;
+            
+        // }
+
         if($old_status != $status) {
             event(new EmployerChangeApplicantsStatus($row));
-        }
+            return redirect()->back()->with('success', __('Update success!'));
+        }   
+    }
 
-        return redirect()->back()->with('success', __('Update success!'));
+    public function applicantsUpdate(Request $request){
+        // var_dump($request->all());die;
+        $this->checkPermission('job_manage');
+
+        $row = JobCandidate::with('jobInfo', 'jobInfo.user', 'candidateInfo', 'company', 'company.getAuthor')
+            ->where('id', $request->input('id'));
+
+        if (!$this->hasPermission('job_manage_others')) {
+            $row = $row->whereHas('jobInfo', function ($q){
+                $company_id = Auth::user()->company->id ?? '';
+                $q->where('company_id', $company_id);
+            });
+        };
+        $row = $row->first();
+        if (empty($row)){
+            return redirect()->back()->with('error', __('Item not found!'));
+        }
+        $row->status = $request->input('status');
+        $row->remarks = $request->input('remarks');
+        $row->crew_code = $request->input('crew_code');
+        $row->date_of_entry = $request->input('date_of_entry');
+        $row->source = $request->input('source');
+        $row->last_name = $request->input('last_name');
+        $row->applied_position = $request->input('applied_position');
+        $row->department = $request->input('department');
+        $row->gender = $request->input('gender');
+        $row->d_o_b = $request->input('d_o_b');
+        $row->age = $request->input('age');
+        $row->vaccination_yf = $request->input('vaccination_yf');
+        $row->vaccination_covid_19 = $request->input('vaccination_covid_19');
+        $row->cid = $request->input('cid');
+        $row->coc = $request->input('coc');
+        $row->ccm = $request->input('ccm');
+        $row->rating_able = $request->input('rating_able');
+        $row->experience = $request->input('experience');
+        $row->application_form = $request->input('application_form');
+        $row->contact_no = $request->input('contact_no');
+        $row->interview_date = $request->input('interview_date');
+        $row->interview_by = $request->input('interview_by');
+        $row->interview_result = $request->input('interview_result');
+        $row->approved_as = $request->input('approved_as');
+        $row->save();
+        return redirect('admin/module/job/all-applicants')->with('success', __('Update success!'));
     }
 
     public function applicantsBulkEdit(Request $request){

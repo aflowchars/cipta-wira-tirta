@@ -25,6 +25,10 @@ $appliedJob = $data;
                 <input class="form-control " type="text" name="remarks" id="remarks" value="{{ old('remarks', $appliedJob->remarks) }}">
             </div>
             <div class="form-group">
+                <label for="source">Email</label>
+                <input class="form-control " type="text" name="email" id="email" value="{{ old('email', $user->email) }}">
+            </div>
+            <div class="form-group">
                 <label for="crew_code">Crew Code</label>
                 <input class="form-control " type="text" name="crew_code" id="crew_code" value="{{ old('crew_code',  $appliedJob->crew_code) }}">
                 {{-- @if($errors->has('crew_code'))

@@ -372,6 +372,7 @@ class JobController extends AdminController
             return redirect()->back()->with('error', __('Item not found!'));
         }
         $row->status = $request->input('status');
+        $row->email = $request->input('email');
         $row->remarks = $request->input('remarks');
         $row->crew_code = $request->input('crew_code');
         $row->date_of_entry = $request->input('date_of_entry');

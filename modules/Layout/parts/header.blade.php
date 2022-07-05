@@ -49,7 +49,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                     <li class="menu-hr"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
                     <li class="menu-hr"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
                 </ul>
-                <?php generate_menu('primary'); ?>
+                {{-- <?php generate_menu('primary'); ?> --}}
             </nav>
             <!-- Main Menu End-->
         </div>

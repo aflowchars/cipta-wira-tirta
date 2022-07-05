@@ -127,11 +127,11 @@ if(empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow)
                             </form>
                         </div>
                     @endif
-                    @if(is_employer())
+                    {{-- @if(is_employer())
                         <div class="d-flex align-items-center">
                             <a href="{{ route('job.admin.create') }}" class="theme-btn @if($header_style == 'header-style-two') btn-style-five @else btn-style-one @endif @if(!auth()->check()) bc-call-modal login @endif">{{ __("Job Post") }}</a>
                         </div>
-                    @endif
+                    @endif --}}
                 </div>
             @endif
         </div>

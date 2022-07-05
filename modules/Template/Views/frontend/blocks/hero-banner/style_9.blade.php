@@ -7,7 +7,7 @@
             </div>
 
             <!-- Job Search Form -->
-            <div class="job-search-form wow">
+            {{-- <div class="job-search-form wow">
                 <form method="get" action="{{ route('job.search') }}">
                     <div class="row">
                         <!-- Form Group -->
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                 </form>
-            </div>
+            </div> --}}
             <!-- Job Search Form -->
 
             <!-- Fun Fact Section -->

@@ -45,11 +45,13 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
             </div>
 
             <nav class="nav main-menu">
+                <div class="dropmenu-right dropdown show">
                 <ul class="dropdown-menu text-left" aria-labelledby="Our Services">
                     <li class="menu-hr"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
                     <li class="menu-hr"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
                 </ul>
-                {{-- <?php generate_menu('primary'); ?> --}}
+                </div>
+                <?php generate_menu('primary'); ?>
             </nav>
             <!-- Main Menu End-->
         </div>

@@ -57,12 +57,10 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
         </div>
 
         <div class="outer-box">
-            qwerty
-            <ul class="dropdown-menu text-left" aria-labelledby="Our Services">
-                <li class="menu-hr"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
-                <li class="menu-hr"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
+            <ul class="navigation" id="navbar" aria-labelledby="Our Services">
+                <li class="depth-0"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
+                <li class="depth-0"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
             </ul>
-            qwerty
             <ul class="multi-lang">
                 @include('Language::frontend.switcher-dropdown')
             </ul>

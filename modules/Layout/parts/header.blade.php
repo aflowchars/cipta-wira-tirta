@@ -45,18 +45,22 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
             </div>
 
             <nav class="nav main-menu">
-                <div class="dropmenu-right dropdown show">
+                {{-- <div class="dropmenu-right dropdown show">
                 <ul class="dropdown-menu text-left" aria-labelledby="Our Services">
                     <li class="menu-hr"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
                     <li class="menu-hr"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
                 </ul>
-                </div>
+                </div> --}}
                 <?php generate_menu('primary'); ?>
             </nav>
             <!-- Main Menu End-->
         </div>
 
         <div class="outer-box">
+            <ul class="dropdown-menu text-left" aria-labelledby="Our Services">
+                <li class="menu-hr"><a href="{{ url('/page/manning-services') }}">{{ __('Manning Services') }}</a></li>
+                <li class="menu-hr"><a href="{{ url('/page/insurance') }}">{{ __('Insurance') }}</a></li>
+            </ul>
             <ul class="multi-lang">
                 @include('Language::frontend.switcher-dropdown')
             </ul>

@@ -3,9 +3,14 @@
     #popup {
         display: inline-block;
         opacity: 0;
-        position:absolute;
+        position: fixed;
         top: 20%;
         left: 50%;
+        /* top: 0;
+        left: 0; */
+        /* width: 100%; */
+        height: 100%;
+        z-index:99;
         padding: 1em;
         transform: translateX(-50%);
         background: #fff;
@@ -78,6 +83,7 @@
 
             /* Hide the popup. */
             setTimeout(() => popup.classList.add("hidden"), 300);
+            window.location.href = "job";
         };
     };
 </script>

@@ -19,7 +19,10 @@ $locale = App::getLocale();
 ?>
 
 <div class="header-logo flex-shrink-0">
-    <h3 class="logo-text"><a href="<?php echo e(url('/admin')); ?>"><?php echo e(__('Superio')); ?> <span class="app-version"><?php echo e(config('app.version')); ?></span></a></h3>
+    <h3 class="logo-text"><a href="<?php echo e(url('/admin')); ?>"><?php echo e(__('CWT')); ?> <span class="app-version">
+        
+        Admin
+    </span></a></h3>
 </div>
 <div class="header-widgets d-flex flex-grow-1">
     <div class="widgets-left d-flex flex-grow-1 align-items-center">

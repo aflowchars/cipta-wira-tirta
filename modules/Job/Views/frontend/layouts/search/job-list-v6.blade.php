@@ -18,7 +18,7 @@
         <div class="row">
 
             <!-- Filters Column -->
-            <div class="filters-column col-lg-4 col-md-12 col-sm-12">
+            {{-- <div class="filters-column col-lg-4 col-md-12 col-sm-12">
                 <div class="inner-column">
                     <div class="filters-outer">
                         <button type="button" class="theme-btn close-filters">X</button>
@@ -43,10 +43,10 @@
                         <!-- End Call To Action -->
                     @endif
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Content Column -->
-            <div class="content-column col-lg-8 col-md-12 col-sm-12">
+            <div class="content-column col-lg-12 col-sm-12 col-sm-12">
                 <div class="ls-outer">
                     <button type="button" class="theme-btn btn-style-two toggle-filters">{{ __("Show Filters") }}</button>
 

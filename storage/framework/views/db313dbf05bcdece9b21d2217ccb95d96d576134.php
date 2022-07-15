@@ -101,8 +101,10 @@
     <?php echo $__env->yieldContent('script.head'); ?>
 
 </head>
+
 <body class="<?php echo e(($enable_multi_lang ?? '') ? 'enable_multi_lang' : ''); ?> <?php if(setting_item('site_enable_multi_lang')): ?> site_enable_multi_lang <?php endif; ?>">
 <div id="app">
+    
     <div class="main-header d-flex">
         <?php echo $__env->make('Layout::admin.parts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
     </div>
@@ -155,5 +157,14 @@
 <?php echo $__env->yieldContent('script.body'); ?>
 
 </body>
+<script type='text/javascript'>
+    $(document).ready(function() { 
+  $('#popUpForm').fadeIn(1000); 
+     
+});
+$( "#close" ).click(function() {
+  $( "#popUpForm" ).css("display", "none");
+});
+</script>
 </html>
 <?php /**PATH /Users/macbook/GitHub/superio200/modules/Layout/admin/app.blade.php ENDPATH**/ ?>

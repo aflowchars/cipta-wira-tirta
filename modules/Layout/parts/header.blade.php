@@ -68,7 +68,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                 @if (auth()->check())
                     <span class="count wishlist_count text-center">{{ (int) auth()->user()->wishlist_count }}</span>
                 @endif
-                <span class="icon la la-bookmark-o"></span>
+                {{-- <span class="icon la la-bookmark-o"></span> --}}
             </a>
             @if (!(isset($exception) && $exception->getStatusCode() == 404))
                 <!-- Login/Register -->

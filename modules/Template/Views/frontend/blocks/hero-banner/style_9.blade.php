@@ -1,11 +1,41 @@
-<section class="banner-section-nine" style="background-image: url(@if(!empty($banner_image)) {{ $banner_image_url }} @endif)">
+<style>
+    /* ----- CSS ----- */
+    #popup {
+        display: inline-block;
+        opacity: 0;
+        position:absolute;
+        top: 20%;
+        left: 50%;
+        padding: 1em;
+        transform: translateX(-50%);
+        background: #fff;
+        border: 1px solid #888;
+        box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
+        transition: opacity .3s ease-in-out;
+    }
+
+    #popup.hidden {
+        display: none;
+    }
+
+    #popup.fade-in {
+        opacity: 1;
+    }
+</style>
+<section class="banner-section-nine"
+    style="background-image: url(@if (!empty($banner_image)) {{ $banner_image_url }} @endif)">
     <div class="auto-container">
         <div class="cotnent-box">
             <div class="title-box wow fadeInUp" data-wow-delay='300ms'>
                 <h3>{!! $title !!}</h3>
                 <div class="text">{{ $sub_title }}</div>
             </div>
-
+            <div id="popup" class="hidden">
+                <div class="img">
+                    {{-- <img src="quit.png" alt='quit' class='x' id='x' />    --}}
+                    <img src="popup.png" />
+                </div>
+            </div>
             <!-- Job Search Form -->
             {{-- <div class="job-search-form wow">
                 <form method="get" action="{{ route('job.search') }}">
@@ -18,7 +48,7 @@
                         </div>
 
                         <!-- Form Group -->
-                        @if($location_style == 'autocomplete')
+                        @if ($location_style == 'autocomplete')
                             @php
                                 $location_name = "";
                                 $list_json = [];
@@ -70,11 +100,11 @@
                             <span class="icon flaticon-briefcase"></span>
                             <select class="chosen-select">
                                 <option value="">{{ __('All Categories')}}</option>
-                                @foreach($list_categories as $cat)
+                                @foreach ($list_categories as $cat)
                                     @php
                                         $translate = $cat->translateOrOrigin(app()->getLocale());
                                     @endphp
-                                    <option value="{{ $cat->id }}" @if($cat->id == request()->get('category')) selected @endif  >{{ $translate->name }}</option>
+                                    <option value="{{ $cat->id }}" @if ($cat->id == request()->get('category')) selected @endif  >{{ $translate->name }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -89,20 +119,43 @@
             <!-- Job Search Form -->
 
             <!-- Fun Fact Section -->
-            @if(!empty($list_counter))
-            <div class="fun-fact-section">
-                <div class="row">
-                    <!--Column-->
-                    @foreach($list_counter as $counter)
-                        <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
-                            <div class="count-box"><span class="count-text" data-speed="3000" data-stop="{{ $counter['title'] }}">0</span></div>
-                            <h4 class="counter-title">{{ $counter['sub_title'] }}</h4>
-                        </div>
-                    @endforeach
+            @if (!empty($list_counter))
+                <div class="fun-fact-section">
+                    <div class="row">
+                        <!--Column-->
+                        @foreach ($list_counter as $counter)
+                            <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="{{ $counter['title'] }}">0</span></div>
+                                <h4 class="counter-title">{{ $counter['sub_title'] }}</h4>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
-            </div>
             @endif
             <!-- Fun Fact Section -->
         </div>
     </div>
 </section>
+<script type='text/javascript'>
+    /* ----- JavaScript ----- */
+    window.onload = function() {
+        /* Cache the popup. */
+        var popup = document.getElementById("popup");
+
+        /* Show the popup. */
+        popup.classList.remove("hidden");
+
+        /* Fade the popup in */
+        setTimeout(() => popup.classList.add("fade-in"));
+
+        /* Close the popup when a city is selected. */
+        document.getElementById("popup").onclick = function() {
+            /* Fade the popup out */
+            popup.classList.remove("fade-in");
+
+            /* Hide the popup. */
+            setTimeout(() => popup.classList.add("hidden"), 300);
+        };
+    };
+</script>

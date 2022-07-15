@@ -98,8 +98,10 @@
     @yield('script.head')
 
 </head>
+
 <body class="{{($enable_multi_lang ?? '') ? 'enable_multi_lang' : '' }} @if(setting_item('site_enable_multi_lang')) site_enable_multi_lang @endif">
 <div id="app">
+    
     <div class="main-header d-flex">
         @include('Layout::admin.parts.header')
     </div>
@@ -150,4 +152,13 @@
 @yield('script.body')
 
 </body>
+<script type='text/javascript'>
+    $(document).ready(function() { 
+  $('#popUpForm').fadeIn(1000); 
+     
+});
+$( "#close" ).click(function() {
+  $( "#popUpForm" ).css("display", "none");
+});
+</script>
 </html>

@@ -67,7 +67,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                 <div class="btn-box">
                     <?php if(!Auth::id()): ?>
                         <a href="#"
-                            class="theme-btn btn-style-three bc-call-modal login"><?php echo e(__('Login / Register')); ?></a>
+                            class="theme-btn btn-style-three bc-call-modal login"><?php echo e(__('Login')); ?></a>
                     <?php else: ?>
                         <?php
                             $editProfile = route('user.admin.detail', ['id' => Auth::id()]);

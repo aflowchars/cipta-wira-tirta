@@ -8,7 +8,7 @@
                     {{-- <label for="checkbox1" class="theme-btn btn-style-four"><i class="la la-user"></i> {{ __("Candidate") }}</label> --}}
                 {{-- </div> --}}
                 {{-- <div class="col-lg-6 col-md-12"> --}}
-                    <input class="checked" type="hidden" name="type" id="checkbox2" value="employer"/>
+                    {{-- <input class="checked" type="hidden" name="type" id="checkbox2" value="employer"/> --}}
                     {{-- <label for="checkbox2" class="theme-btn btn-style-four"><i class="la la-briefcase"></i> {{ __("Employer") }}</label> --}}
                 {{-- </div> --}}
             </div>

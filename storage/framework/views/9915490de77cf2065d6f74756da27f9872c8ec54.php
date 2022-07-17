@@ -38,7 +38,7 @@
             <div id="popup" class="hidden">
                 <div class="img">
                     
-                    <img src="popup.png" />
+                    <img src="popup.png" width="95%" height="75%" />
                 </div>
             </div>
             <!-- Job Search Form -->

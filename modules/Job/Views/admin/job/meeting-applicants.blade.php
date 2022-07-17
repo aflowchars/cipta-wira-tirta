@@ -1,9 +1,9 @@
 @extends('admin.layouts.app')
-@section('title','All Applicants')
+@section('title','Meeting Applicants')
 @section('content')
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb-4">
-            <h1 class="title-bar">{{__("All Applicants")}}</h1>
+            <h1 class="title-bar">{{__("Meeting Applicants")}}</h1>
         </div>
         @include('admin.message')
         <div class="filter-div d-flex justify-content-between ">
@@ -94,27 +94,6 @@
                                         <th width="150px"> {{ __('CV')}}</th>
                                         <th width="150px"> {{ __('Date Applied')}}</th>
                                         <th width="100px"> {{ __('Status')}}</th>
-                                        <th width="100px"> {{ __('Remarks')}}</th>
-                                        <th width="100px"> {{ __('Crew Code')}}</th>
-                                        <th width="100px"> {{ __('Source')}}</th>
-                                        <th width="100px"> {{ __('Applied Position')}}</th>
-                                        <th width="100px"> {{ __('Department')}}</th>
-                                        <th width="100px"> {{ __('Gender')}}</th>
-                                        <th width="100px"> {{ __('D.O.B')}}</th>
-                                        <th width="100px"> {{ __('Age')}}</th>
-                                        <th width="100px"> {{ __('vaccination yf')}}</th>
-                                        <th width="100px"> {{ __('vaccination covid 19')}}</th>
-                                        <th width="100px"> {{ __('CID')}}</th>
-                                        <th width="100px"> {{ __('COC')}}</th>
-                                        <th width="100px"> {{ __('Rating Able')}}</th>
-                                        <th width="100px"> {{ __('CCM')}}</th>
-                                        <th width="100px"> {{ __('Experience')}}</th>
-                                        <th width="100px"> {{ __('Application Form')}}</th>
-                                        <th width="100px"> {{ __('Contact No')}}</th>
-                                        <th width="100px"> {{ __('interview date')}}</th>
-                                        <th width="100px"> {{ __('interview by')}}</th>
-                                        <th width="100px"> {{ __('interview result')}}</th>
-                                        <th width="100px"> {{ __('Remarks')}}</th>
                                         <th width="100px"></th>
                                     </tr>
                                     </thead>

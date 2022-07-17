@@ -4,11 +4,11 @@
         <div class="form-group">
             <div class="btn-box row">
                 
-                    <input class="checked" type="hidden" name="type" id="checkbox1" value="candidate" checked/>
+                    <input class="checked" style="display: none" type="radio" name="type" id="checkbox1" value="candidate" checked/>
                     
                 
                 
-                    <input class="checked" type="hidden" name="type" id="checkbox2" value="employer"/>
+                    <input class="checked"style="display: none" type="radio" name="type" id="checkbox2" value="employer"/>
                     
                 
             </div>

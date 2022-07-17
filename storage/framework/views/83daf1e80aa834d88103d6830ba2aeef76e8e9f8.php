@@ -1,5 +1,5 @@
 
-<?php $__env->startSection('title','All Applicants'); ?>
+<?php $__env->startSection('title','Status Applicants'); ?>
 <?php $__env->startSection('content'); ?>
     <div class="container-fluid">
         <div class="d-flex justify-content-between mb-4">
@@ -96,27 +96,6 @@
                                         <th width="150px"> <?php echo e(__('CV')); ?></th>
                                         <th width="150px"> <?php echo e(__('Date Applied')); ?></th>
                                         <th width="100px"> <?php echo e(__('Status')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Remarks')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Crew Code')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Source')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Applied Position')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Department')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Gender')); ?></th>
-                                        <th width="100px"> <?php echo e(__('D.O.B')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Age')); ?></th>
-                                        <th width="100px"> <?php echo e(__('vaccination yf')); ?></th>
-                                        <th width="100px"> <?php echo e(__('vaccination covid 19')); ?></th>
-                                        <th width="100px"> <?php echo e(__('CID')); ?></th>
-                                        <th width="100px"> <?php echo e(__('COC')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Rating Able')); ?></th>
-                                        <th width="100px"> <?php echo e(__('CCM')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Experience')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Application Form')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Contact No')); ?></th>
-                                        <th width="100px"> <?php echo e(__('interview date')); ?></th>
-                                        <th width="100px"> <?php echo e(__('interview by')); ?></th>
-                                        <th width="100px"> <?php echo e(__('interview result')); ?></th>
-                                        <th width="100px"> <?php echo e(__('Remarks')); ?></th>
                                         <th width="100px"></th>
                                     </tr>
                                     </thead>
@@ -245,4 +224,4 @@
     </div>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/macbook/GitHub/superio200/modules/Job/Views/admin/job/all-applicants.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin.layouts.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/macbook/GitHub/superio200/modules/Job/Views/admin/job/status-applicants.blade.php ENDPATH**/ ?>

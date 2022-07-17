@@ -139,7 +139,10 @@ $appliedJob = $data;
             </div>
             <div class="form-group">
                 <label for="source">Experience</label>
-                <input class="form-control " type="text" name="experience" id="experience" value="{{ old('bio', $user->bio) }}">
+                {{-- <input class="form-control " type="text" name="experience" id="experience" value="{{ old('bio', $user->bio) }}"> --}}
+                <textarea class="form-control " name="experience" id="experience" cols="30" rows="10">
+                    {!! old('experience', $user->bio) !!}
+                </textarea>
             </div>
             <div class="form-group">
                 <label for="rating_able">Application Form</label>

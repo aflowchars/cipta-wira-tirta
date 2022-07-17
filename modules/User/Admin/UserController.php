@@ -182,7 +182,7 @@ class UserController extends AdminController
 
             $request->validate([
                 'first_name'              => 'required|max:255',
-                'last_name'              => 'required|max:255',
+                // 'last_name'              => 'required|max:255',
                 'status'              => 'required|max:50',
                 'phone'              => 'required',
                 'role_id'              => 'sometimes|required|max:11',
@@ -197,7 +197,7 @@ class UserController extends AdminController
         }else{
             $check = Validator::make($request->input(),[
                 'first_name'              => 'required|max:255',
-                'last_name'              => 'required|max:255',
+                // 'last_name'              => 'required|max:255',
                 'status'              => 'required|max:50',
                 'phone'              => 'required',
                 'role_id'              => 'sometimes|required|max:11',

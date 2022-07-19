@@ -26,6 +26,12 @@
             <span class="invalid-feedback error error-password"></span>
         </div>
 
+        <div class="form-group">
+            <label><?php echo e(__("No HP")); ?></label>
+            <input id="password-field" type="text" name="phone" value="" placeholder="<?php echo e(__("Phone Number")); ?>">
+            <span class="invalid-feedback error error-password"></span>
+        </div>
+
         <?php if(setting_item("recaptcha_enable")): ?>
             <div class="form-group">
                 <?php echo e(recaptcha_field($captcha_action ?? 'register')); ?>

@@ -26,6 +26,12 @@
             <span class="invalid-feedback error error-password"></span>
         </div>
 
+        <div class="form-group">
+            <label>{{ __("No HP") }}</label>
+            <input id="password-field" type="text" name="phone" value="" placeholder="{{ __("Phone Number") }}">
+            <span class="invalid-feedback error error-password"></span>
+        </div>
+
         @if(setting_item("recaptcha_enable"))
             <div class="form-group">
                 {{recaptcha_field($captcha_action ?? 'register')}}

@@ -86,13 +86,13 @@ class ModuleProvider extends ModuleServiceProvider
                     'icon'       => 'ion-md-bookmarks',
                     'permission' => 'employer_manage',
                 ],
-                [
-                    "position"=> 28,
-                    'url'        => route('company.admin.myContact'),
-                    'title'      => __("My Contact"),
-                    'icon'       => 'ion-md-mail',
-                    'permission' => 'employer_manage'
-                ]
+                // [
+                //     "position"=> 28,
+                //     'url'        => route('company.admin.myContact'),
+                //     'title'      => __("My Contact"),
+                //     'icon'       => 'ion-md-mail',
+                //     'permission' => 'employer_manage'
+                // ]
             ];
         }
 

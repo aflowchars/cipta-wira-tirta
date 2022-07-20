@@ -40,7 +40,7 @@
 
                         <div class="form-group">
                             <label>{{__("No KTP (Wajib)")}}</label>
-                            <input type="text" value="{{old('phone',$row->phone)}}" name="ktp" placeholder="{{__("Phone Number")}}" class="form-control">
+                            <input type="text" value="{{old('phone',$row->phone)}}" name="ktp" placeholder="{{__("Nomor KTP")}}" class="form-control">
                         </div>
 
                         <div class="form-group">

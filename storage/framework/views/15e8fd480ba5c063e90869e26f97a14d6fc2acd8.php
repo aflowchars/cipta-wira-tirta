@@ -37,6 +37,12 @@
                             <label><?php echo e(__("Nomor HP (Wajib)")); ?></label>
                             <input type="text" value="<?php echo e(old('phone',$row->phone)); ?>" name="phone" placeholder="<?php echo e(__("Phone Number")); ?>" class="form-control">
                         </div>
+
+                        <div class="form-group">
+                            <label><?php echo e(__("No KTP (Wajib)")); ?></label>
+                            <input type="text" value="<?php echo e(old('phone',$row->phone)); ?>" name="ktp" placeholder="<?php echo e(__("Nomor KTP")); ?>" class="form-control">
+                        </div>
+
                         <div class="form-group">
                             <label><?php echo e(__("Tanggal Lahir (Wajib)")); ?></label>
                             <input type="text" value="<?php echo e(old('birthday',$row->birthday? display_date($row->birthday) :'')); ?>" name="birthday" placeholder="<?php echo e(__("Tanggal Lahir (Wajib)")); ?>" class="form-control has-datepicker" autocomplete="off">

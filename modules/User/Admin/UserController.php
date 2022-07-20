@@ -227,6 +227,7 @@ class UserController extends AdminController
         $row->first_name = $request->input('first_name');
         $row->last_name = $request->input('last_name');
         $row->phone = $request->input('phone');
+        $row->ktp = $request->input('ktp');
         $row->birthday = date("Y-m-d", strtotime($request->input('birthday')));
         $row->bio = clean($request->input('bio'));
         $row->status = $request->input('status');

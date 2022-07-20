@@ -421,3 +421,58 @@ Content-Transfer-Encoding: quoted-printable
     "idNotification": "aa456dc4-df64-41ce-a09b-f68c3399c167",
     "socket": null
 }  
+[2022-07-20 21:34:58] development.INFO: Broadcasting [App\Events\PusherNotificationPrivateEvent] on channels [user-channel-16] with payload:
+{
+    "message": "Employer rejected you from job Electro Technical Officer",
+    "avatar": "<img class=\"image-responsive\" src=\"http:\/\/localhost:8000\/uploads\/0000\/18\/2022\/07\/04\/user-150.png\" alt=\"Radivan Hartimi\">",
+    "link": "http:\/\/localhost:8000\/admin\/module\/candidate\/my-applied",
+    "idNotification": "9db1a590-da6f-4e99-9e9f-feec030256ce",
+    "userId": 16,
+    "socket": null
+}  
+[2022-07-20 21:34:59] development.DEBUG: Message-ID: <29bf9ee3ec0a05b1cfb6e807af8c0cc7@127.0.0.1>
+Date: Wed, 20 Jul 2022 21:34:58 +0700
+Subject: Employer change applicants status
+From: Superio <support@superio.com>
+To: radivanhatimi42@gmail.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!--<![endif]--><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" id="google-font-css-css" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600" type="text/css" media="all">
+<style type="text/css">@media screen and (max-width: 768px){.b-panel{padding: 15px;}.b-email-wrap{padding: 0px;}}</style>
+</head>
+<body>
+        <div class="b-email-wrap" style='background: #ebeef2; padding: 40px 0px; color: #1a2b48; font-size: 14px; font-weight: normal; line-height: 1.5; overflow-x: hidden; margin: 0px; font-family: "Poppins",sans-serif;'>
+            <div class="" style="">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-header" style="padding: 30px; color: white; background: #1967d2;">
+                        <h1 class="site-title" style="margin: 0px; display: block; text-align: center;">Superio</h1>
+        </div>
+    </div>
+</div>
+
+                <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <div class="b-panel" style="border: 1px solid rgba(0,0,0,.1); margin-bottom: 30px; padding: 30px; background: white;">
+            <h3>Hello Radivan Hartimi,</h3>
+                            <p>Employer rejected you from job Electro Technical Officer</p>
+                            <p>Regards,</p>
+                            <p>Superio</p>
+        </div>
+    </div>
+
+            <div class="b-footer" style="margin-top: 0px;">
+    <div class="b-container" style="max-width: 600px; margin: 0px auto;">
+        <p class="" style="text-align: center;">© 2021 Superio. All rights reserved</p>
+    </div>
+</div>        </div>
+    </body>
+</html>
+  

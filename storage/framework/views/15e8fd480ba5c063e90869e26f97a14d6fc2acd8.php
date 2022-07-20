@@ -90,6 +90,59 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('Passport')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('VISA')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('BST / CCM')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="panel">
                     <div class="panel-title"><strong><?php echo e(__('Foto Formal (Wajib)')); ?></strong></div>
                     <div class="panel-body">

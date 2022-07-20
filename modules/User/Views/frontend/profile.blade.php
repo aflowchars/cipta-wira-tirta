@@ -91,6 +91,56 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('Passport')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('VISA')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('BST / CCM')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="panel">
                     <div class="panel-title"><strong>{{ __('Foto Formal (Wajib)')}}</strong></div>
                     <div class="panel-body">

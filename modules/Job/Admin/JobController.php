@@ -622,8 +622,17 @@ class JobController extends AdminController
 
         $rows = $rows->orderBy('id', 'desc')
             ->paginate(20);
+
+        // $rows1 = $rows->where('status','pending')->orderBy('id', 'desc')
+        //     ->paginate(20);
+
+        // $rows2 = $rows->where('status','pending')->orderBy('id', 'desc')
+        //     ->paginate(20);
+            
         $data = [
-            'rows' => $rows
+            'rows' => $rows,
+            // 'rows1' => $rows1,
+            // 'rows2' => $rows2
         ];
         return view('Job::admin.job.all-applicants', $data);
     }

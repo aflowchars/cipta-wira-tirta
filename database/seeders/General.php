@@ -1147,6 +1147,10 @@ class General extends Seeder
                     'val'   => MediaFile::findMediaByName("logo-white")->id
                 ],
                 [
+                    'name'  => 'banner_id',
+                    'val'   => MediaFile::findMediaByName("banner")->id
+                ],
+                [
                     'name'  => 'site_favicon',
                     'val'   => MediaFile::findMediaByName("favicon")->id
                 ],

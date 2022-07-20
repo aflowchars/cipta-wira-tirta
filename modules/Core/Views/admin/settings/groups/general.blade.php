@@ -220,6 +220,13 @@
                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('logo_white_id',$settings['logo_white_id'] ?? '') !!}
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <label>{{__("Banner Logo")}}</label>
+                        <div class="form-controls form-group-image">
+                            {!! \Modules\Media\Helpers\FileHelper::fieldUpload('banner_id',$settings['banner_id'] ?? '') !!}
+                        </div>
+                    </div>
                 @endif
                 <div class="form-group">
                     <label>{{__("Footer Style")}}</label>

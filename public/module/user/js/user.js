@@ -141,6 +141,94 @@ jQuery(function ($) {
                                 +'</div>'
                         }
                     }
+
+                    // for(var i = 0 ; i < files.length; i++){
+                    //     ids.push(files[i].id);
+                    //     if(typeof type == 'undefined'){
+                    //         html+='<div class="image-item"><div class="inner"><span class="delete btn btn-sm btn-danger"><i class="fa fa-trash"></i></span><img src="'+files[i].thumb_size+'"/></div></div>'
+                    //     }else{
+                    //         if(files[i].file_extension == 'docx' || files[i].file_extension == 'doc'){
+                    //             var file_icon = 'fa-file-word-o';
+                    //         }else{
+                    //             var file_icon = 'fa-file-pdf-o';
+                    //         }
+
+                    //         html+='<div class="item">'
+                    //             +'<div class="row">' +
+                    //             '<div class="col-md-2">' +
+                    //             '  <input type="radio" class="form-control" name="csv_default"  value="'+files[i].id+'" />' +
+                    //             '</div>'
+                    //             +'<div class="col-md-8">'
+                    //             +'<input type="hidden" name="passport[]" class="form-control" value="'+files[i].id+'" >'
+                    //             +'<i class="fa '+file_icon+'"></i> '
+                    //             + files[i].file_name +'.'+ files[i].file_extension
+                    //             +'</div>'
+                    //             +'<div class="col-md-2">'
+                    //             +'<span class="btn btn-danger btn-sm btn-remove-item"><i class="fa fa-trash"></i></span>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //     }
+                    // }
+
+                    // for(var i = 0 ; i < files.length; i++){
+                    //     ids.push(files[i].id);
+                    //     if(typeof type == 'undefined'){
+                    //         html+='<div class="image-item"><div class="inner"><span class="delete btn btn-sm btn-danger"><i class="fa fa-trash"></i></span><img src="'+files[i].thumb_size+'"/></div></div>'
+                    //     }else{
+                    //         if(files[i].file_extension == 'docx' || files[i].file_extension == 'doc'){
+                    //             var file_icon = 'fa-file-word-o';
+                    //         }else{
+                    //             var file_icon = 'fa-file-pdf-o';
+                    //         }
+
+                    //         html+='<div class="item">'
+                    //             +'<div class="row">' +
+                    //             '<div class="col-md-2">' +
+                    //             '  <input type="radio" class="form-control" name="csv_default"  value="'+files[i].id+'" />' +
+                    //             '</div>'
+                    //             +'<div class="col-md-8">'
+                    //             +'<input type="hidden" name="visa[]" class="form-control" value="'+files[i].id+'" >'
+                    //             +'<i class="fa '+file_icon+'"></i> '
+                    //             + files[i].file_name +'.'+ files[i].file_extension
+                    //             +'</div>'
+                    //             +'<div class="col-md-2">'
+                    //             +'<span class="btn btn-danger btn-sm btn-remove-item"><i class="fa fa-trash"></i></span>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //     }
+                    // }
+
+                    // for(var i = 0 ; i < files.length; i++){
+                    //     ids.push(files[i].id);
+                    //     if(typeof type == 'undefined'){
+                    //         html+='<div class="image-item"><div class="inner"><span class="delete btn btn-sm btn-danger"><i class="fa fa-trash"></i></span><img src="'+files[i].thumb_size+'"/></div></div>'
+                    //     }else{
+                    //         if(files[i].file_extension == 'docx' || files[i].file_extension == 'doc'){
+                    //             var file_icon = 'fa-file-word-o';
+                    //         }else{
+                    //             var file_icon = 'fa-file-pdf-o';
+                    //         }
+
+                    //         html+='<div class="item">'
+                    //             +'<div class="row">' +
+                    //             '<div class="col-md-2">' +
+                    //             '  <input type="radio" class="form-control" name="csv_default"  value="'+files[i].id+'" />' +
+                    //             '</div>'
+                    //             +'<div class="col-md-8">'
+                    //             +'<input type="hidden" name="bst_ccm[]" class="form-control" value="'+files[i].id+'" >'
+                    //             +'<i class="fa '+file_icon+'"></i> '
+                    //             + files[i].file_name +'.'+ files[i].file_extension
+                    //             +'</div>'
+                    //             +'<div class="col-md-2">'
+                    //             +'<span class="btn btn-danger btn-sm btn-remove-item"><i class="fa fa-trash"></i></span>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //             +'</div>'
+                    //     }
+                    // }
+
                     if(typeof type == 'undefined'){
                         p.find('.attach-demo').append(html);
                         var old = p.find('input').val().split(',');

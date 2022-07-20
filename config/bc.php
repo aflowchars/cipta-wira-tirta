@@ -21,6 +21,21 @@ return [
                 "mime"=>["application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"],
                 "max_size" => 50000000,
             ],
+            'visa'=>[
+                "ext"=>['ppt','pptx','pdf','docx','doc'],
+                "mime"=>["application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"],
+                "max_size" => 50000000,
+            ],
+            'passport'=>[
+                "ext"=>['ppt','pptx','pdf','docx','doc'],
+                "mime"=>["application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"],
+                "max_size" => 50000000,
+            ],
+            'bst_ccm'=>[
+                "ext"=>['ppt','pptx','pdf','docx','doc'],
+                "mime"=>["application/vnd.ms-powerpoint","application/vnd.openxmlformats-officedocument.presentationml.presentation","application/pdf","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/msword"],
+                "max_size" => 50000000,
+            ],
             'scorm' => [
                 "ext"=>['zip','rar', 'gzip'],
                 "mime"=> ['application/x-gzip', 'application/zip', 'application/x-rar-compressed'],

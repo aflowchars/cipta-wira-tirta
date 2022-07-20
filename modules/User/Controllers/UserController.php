@@ -28,6 +28,9 @@ use App\Helpers\ReCaptchaEngine;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Modules\Booking\Models\Enquiry;
 use Illuminate\Support\Str;
+use Modules\Candidate\Models\CandidateBstCcm;
+use Modules\Candidate\Models\CandidatePassport;
+use Modules\Candidate\Models\CandidateVisa;
 use Modules\Company\Models\Company;
 
 class UserController extends FrontendController
@@ -87,7 +90,10 @@ class UserController extends FrontendController
             'locations' => Location::query()->where('status', 'publish')->get()->toTree(),
             'categories' => Category::get()->toTree(),
             'skills' => Skill::query()->where('status', 'publish')->get(),
-            'cvs'   => CandidateCvs::query()->where('origin_id', $user->id)->with('media')->get()
+            'cvs'   => CandidateCvs::query()->where('origin_id', $user->id)->with('media')->get(),
+            'passport'   => CandidatePassport::query()->where('origin_id', $user->id)->with('media')->get(),
+            'visa'   => CandidateVisa::query()->where('origin_id', $user->id)->with('media')->get(),
+            'bst_ccm'   => CandidateBstCcm::query()->where('origin_id', $user->id)->with('media')->get()
         ];
         return view('User::frontend.profile', $data);
     }
@@ -106,7 +112,7 @@ class UserController extends FrontendController
             ],
         ]);
 //        $input = $request->except('bio');
-        dd($user->fill($request->input()));
+        // dd($user->fill($request->input()));
         $user->fill($request->input());
         $user->bio = clean($request->input('bio'));
         $user->birthday = date("Y-m-d", strtotime($user->birthday));

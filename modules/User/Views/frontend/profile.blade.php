@@ -103,7 +103,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('passport', @$passport, 'passport') !!}
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('visa', @$visa, 'visa') !!}
                         </div>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('bst_ccm', @$bst_ccm, 'bst_ccm') !!}
                         </div>
                     </div>
                 </div>

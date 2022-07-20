@@ -102,7 +102,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('passport', @$passport, 'passport'); ?>
 
                         </div>
                     </div>
@@ -119,7 +119,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('visa', @$visa, 'visa'); ?>
 
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
-                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('bst_ccm', @$bst_ccm, 'bst_ccm'); ?>
 
                         </div>
                     </div>

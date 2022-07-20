@@ -37,6 +37,12 @@
                             <label>{{__("Nomor HP (Wajib)")}}</label>
                             <input type="text" value="{{old('phone',$row->phone)}}" name="phone" placeholder="{{__("Phone Number")}}" class="form-control">
                         </div>
+
+                        <div class="form-group">
+                            <label>{{__("No KTP (Wajib)")}}</label>
+                            <input type="text" value="{{old('phone',$row->phone)}}" name="ktp" placeholder="{{__("Phone Number")}}" class="form-control">
+                        </div>
+
                         <div class="form-group">
                             <label>{{__("Tanggal Lahir (Wajib)")}}</label>
                             <input type="text" value="{{ old('birthday',$row->birthday? display_date($row->birthday) :'') }}" name="birthday" placeholder="{{__("Tanggal Lahir (Wajib)")}}" class="form-control has-datepicker" autocomplete="off">

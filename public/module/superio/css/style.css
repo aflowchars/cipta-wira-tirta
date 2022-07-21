@@ -3107,7 +3107,7 @@ Main Header
 }
 
 .main-header.header-style-two.fixed-header {
-    background-color: #22218c;
+    background-color: #051650;
 }
 
 .main-header.header-shaddow{
@@ -5945,7 +5945,7 @@ Banner Section Nine
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 80vh;
     text-align: center;
     padding: 360px 0 75px;
 }
@@ -5962,6 +5962,7 @@ Banner Section Nine
     line-height: 68px;
     color: #FFFFFF;
     margin-bottom: 5px;
+    margin-top: -105px;
 }
 
 .banner-section-nine .text{
@@ -8969,8 +8970,9 @@ Clients Section
 
 .clients-section{
     position: relative;
-    padding: 60px 0 60px;
+    padding: 0;
     border-bottom: 1px solid #ECEDF2;
+    min-height: 20vh;
 }
 
 .clients-section.alternate{
@@ -11037,7 +11039,7 @@ Listing Section  (Ls Section)
 .ls-section h4{
     position: relative;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
     color: #202124;
     margin-bottom: 16px;
@@ -15644,10 +15646,10 @@ TNC Section
 }
 
 .tnc-section p{
-    font-size: 15px;
+    font-size: 16px;
     line-height: 24px;
     color: #696969;
-    margin-bottom: 24px;
+    margin: 24px 0;
 }
 
 /***
@@ -16382,13 +16384,16 @@ Main Footer
 
 .main-footer .social-links a{
     position: relative;
-    margin-left: 35px;
     font-size: 14px;
     line-height: 24px;
     color: #696969;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
     transition: all 300ms ease;
+}
+
+.main-footer .social-links a:not(:first-child){
+    margin-left: 35px;
 }
 
 .main-footer .social-links a:hover{
@@ -16856,7 +16861,7 @@ Main Footer / Style Six
 ***/
 
 .main-footer.style-six{
-    background-color: #2F333C;
+    background-color: #051650;
 }
 
 .main-footer.style-six .widgets-section{

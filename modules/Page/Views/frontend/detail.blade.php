@@ -18,3 +18,13 @@
         </section>
     @endif
 @endsection
+
+<style>
+    .tnc-section .blog-content img {
+        border-radius: 8px;
+        margin-bottom: 24px;
+    }
+
+    .tnc-section .blog-content img {
+
+</style>

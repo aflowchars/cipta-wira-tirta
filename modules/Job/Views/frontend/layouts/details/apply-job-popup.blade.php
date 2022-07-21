@@ -1,7 +1,7 @@
 @if(is_candidate() && !empty($candidate))
     <div class="model bc-model" id="apply-job">
         <!-- Apply Job modal -->
-        <div id="apply-job-modal">
+        <div id="apply-job-modal" class="apply-job-modal">
             <!-- Apply Job Form -->
             @if (Auth::user()->phone == '' || Auth::user()->birthday == ''|| Auth::user()->bio == '' ||Auth::user()->avatar_id == '')
             @php
@@ -86,3 +86,12 @@
         </div>
     </div>
 @endif
+
+<style>
+    .model .apply-job-modal {
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style>

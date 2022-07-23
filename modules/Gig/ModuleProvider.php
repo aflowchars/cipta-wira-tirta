@@ -33,45 +33,45 @@ class ModuleProvider extends ModuleServiceProvider
     {
         if(!Gig::isEnable()) return [];
         return [
-            'gig'=>[
-                "position"=>40,
-                'url'        => route('gig.admin.index'),
-                'title'      => __('Gigs'),
-                'icon'       => 'ion-ios-calendar',
-                'permission' => 'gig_manage',
-                'children'   => [
-                    'add'=>[
-                        'url'        => route('gig.admin.index'),
-                        'title'      => __('All Gigs'),
-                        'permission' => 'gig_manage',
-                    ],
-                    'create'=>[
-                        'url'        => route('gig.admin.create'),
-                        'title'      => __('Add new Gig'),
-                        'permission' => 'gig_manage',
-                    ],
-                    'cat'=>[
-                        'url'        => route('gig.admin.category.index'),
-                        'title'      => __('Category'),
-                        'permission' => 'gig_manage_others',
-                    ],
-                    'cat_type'=>[
-                        'url'        => route('gig.admin.category_type.index'),
-                        'title'      => __('Category Types'),
-                        'permission' => 'gig_manage_others',
-                    ],
-                    'attribute'=>[
-                        'url'        => route('gig.admin.attribute.index'),
-                        'title'      => __('Attributes'),
-                        'permission' => 'gig_manage_others',
-                    ],
-                    'recovery'=>[
-                        'url'        => route('gig.admin.recovery'),
-                        'title'      => __('Recovery'),
-                        'permission' => 'gig_manage_others',
-                    ],
-                ]
-            ]
+            // 'gig'=>[
+            //     "position"=>40,
+            //     'url'        => route('gig.admin.index'),
+            //     'title'      => __('Gigs'),
+            //     'icon'       => 'ion-ios-calendar',
+            //     'permission' => 'gig_manage',
+            //     'children'   => [
+            //         'add'=>[
+            //             'url'        => route('gig.admin.index'),
+            //             'title'      => __('All Gigs'),
+            //             'permission' => 'gig_manage',
+            //         ],
+            //         'create'=>[
+            //             'url'        => route('gig.admin.create'),
+            //             'title'      => __('Add new Gig'),
+            //             'permission' => 'gig_manage',
+            //         ],
+            //         'cat'=>[
+            //             'url'        => route('gig.admin.category.index'),
+            //             'title'      => __('Category'),
+            //             'permission' => 'gig_manage_others',
+            //         ],
+            //         'cat_type'=>[
+            //             'url'        => route('gig.admin.category_type.index'),
+            //             'title'      => __('Category Types'),
+            //             'permission' => 'gig_manage_others',
+            //         ],
+            //         'attribute'=>[
+            //             'url'        => route('gig.admin.attribute.index'),
+            //             'title'      => __('Attributes'),
+            //             'permission' => 'gig_manage_others',
+            //         ],
+            //         'recovery'=>[
+            //             'url'        => route('gig.admin.recovery'),
+            //             'title'      => __('Recovery'),
+            //             'permission' => 'gig_manage_others',
+            //         ],
+            //     ]
+            // ]
         ];
     }
 

@@ -10,9 +10,12 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Modules\AdminController;
 use Modules\Candidate\Models\Candidate;
+use Modules\Candidate\Models\CandidateBstCcm;
 use Modules\Candidate\Models\CandidateCategories;
 use Modules\Candidate\Models\CandidateCvs;
+use Modules\Candidate\Models\CandidatePassport;
 use Modules\Candidate\Models\CandidateSkills;
+use Modules\Candidate\Models\CandidateVisa;
 use Modules\Candidate\Models\Category;
 use Modules\Location\Models\Location;
 use Modules\Skill\Models\Skill;
@@ -91,6 +94,9 @@ class UserController extends AdminController
             'locations' => Location::query()->where('status', 'publish')->get()->toTree(),
             'categories' => Category::get()->toTree(),
             'cvs'   => CandidateCvs::query()->where('origin_id', $id)->with('media')->get(),
+            'passport'   => CandidatePassport::query()->where('origin_id', $id)->with('media')->get(),
+            'visa'   => CandidateVisa::query()->where('origin_id', $id)->with('media')->get(),
+            'bst_ccm'   => CandidateBstCcm::query()->where('origin_id', $id)->with('media')->get(),
             'skills' => Skill::query()->where('status', 'publish')->get(),
             'breadcrumbs'=>[
                 [
@@ -182,7 +188,7 @@ class UserController extends AdminController
 
             $request->validate([
                 'first_name'              => 'required|max:255',
-                'last_name'              => 'required|max:255',
+                // 'last_name'              => 'required|max:255',
                 'status'              => 'required|max:50',
                 'phone'              => 'required',
                 'role_id'              => 'sometimes|required|max:11',
@@ -197,7 +203,7 @@ class UserController extends AdminController
         }else{
             $check = Validator::make($request->input(),[
                 'first_name'              => 'required|max:255',
-                'last_name'              => 'required|max:255',
+                // 'last_name'              => 'required|max:255',
                 'status'              => 'required|max:50',
                 'phone'              => 'required',
                 'role_id'              => 'sometimes|required|max:11',
@@ -221,6 +227,7 @@ class UserController extends AdminController
         $row->first_name = $request->input('first_name');
         $row->last_name = $request->input('last_name');
         $row->phone = $request->input('phone');
+        $row->ktp = $request->input('ktp');
         $row->birthday = date("Y-m-d", strtotime($request->input('birthday')));
         $row->bio = clean($request->input('bio'));
         $row->status = $request->input('status');
@@ -282,6 +289,57 @@ class UserController extends AdminController
                             continue;
                         }
                         $cv =  new CandidateCvs();
+                        $cv->file_id = $oneCv;
+                        $cv->origin_id = $row->id;
+                        $cv->is_default = ($oneCv == @$request->csv_default) ? 1 : 0;
+                        $cv->create_user = Auth::id();
+                        $cv->save();
+                    }
+                }
+
+                $uploadedCandidate = CandidatePassport::query()->where('origin_id', $row->id)->pluck('file_id')->toArray();
+                $cvUpload = $request->input('passport', []);
+                CandidatePassport::query()->where('origin_id', $row->id)->whereNotIn('file_id', $cvUpload)->delete();
+                if(!empty($cvUpload)){
+                    foreach($cvUpload as $oneCv){
+                        if(in_array($oneCv, $uploadedCandidate)){
+                            continue;
+                        }
+                        $cv =  new CandidatePassport();
+                        $cv->file_id = $oneCv;
+                        $cv->origin_id = $row->id;
+                        $cv->is_default = ($oneCv == @$request->csv_default) ? 1 : 0;
+                        $cv->create_user = Auth::id();
+                        $cv->save();
+                    }
+                }
+
+                $uploadedCandidate = CandidateVisa::query()->where('origin_id', $row->id)->pluck('file_id')->toArray();
+                $cvUpload = $request->input('visa', []);
+                CandidateVisa::query()->where('origin_id', $row->id)->whereNotIn('file_id', $cvUpload)->delete();
+                if(!empty($cvUpload)){
+                    foreach($cvUpload as $oneCv){
+                        if(in_array($oneCv, $uploadedCandidate)){
+                            continue;
+                        }
+                        $cv =  new CandidateVisa();
+                        $cv->file_id = $oneCv;
+                        $cv->origin_id = $row->id;
+                        $cv->is_default = ($oneCv == @$request->csv_default) ? 1 : 0;
+                        $cv->create_user = Auth::id();
+                        $cv->save();
+                    }
+                }
+
+                $uploadedCandidate = CandidateBstCcm::query()->where('origin_id', $row->id)->pluck('file_id')->toArray();
+                $cvUpload = $request->input('bst_ccm', []);
+                CandidateBstCcm::query()->where('origin_id', $row->id)->whereNotIn('file_id', $cvUpload)->delete();
+                if(!empty($cvUpload)){
+                    foreach($cvUpload as $oneCv){
+                        if(in_array($oneCv, $uploadedCandidate)){
+                            continue;
+                        }
+                        $cv =  new CandidateBstCcm();
                         $cv->file_id = $oneCv;
                         $cv->origin_id = $row->id;
                         $cv->is_default = ($oneCv == @$request->csv_default) ? 1 : 0;

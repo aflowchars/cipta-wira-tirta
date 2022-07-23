@@ -70,6 +70,7 @@ class SettingsController extends AdminController
                     'phone_contact',
                     'home_page_id',
                     'logo_id',
+                    'banner_id',
                     'logo_white_id',
                     'footer_style',
                     'copyright',
@@ -102,6 +103,7 @@ class SettingsController extends AdminController
                     'site_title',
                     'site_desc',
                     'logo_id',
+                    'banner_id',
                 ];
                 break;
             case 'style':

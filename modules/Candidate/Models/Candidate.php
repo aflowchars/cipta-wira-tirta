@@ -85,6 +85,22 @@ class Candidate extends BaseModel
         return $this->hasMany(CandidateCvs::class,'origin_id');
     }
 
+    public function passport()
+    {
+        return $this->hasMany(CandidatePassport::class,'origin_id');
+    }
+
+
+    public function visa()
+    {
+        return $this->hasMany(CandidateVisa::class,'origin_id');
+    }
+
+    public function bst_ccm()
+    {
+        return $this->hasMany(CandidateBstCcm::class,'origin_id');
+    }
+
     public function location(){
         return $this->belongsTo(Location::class,'location_id','id');
     }

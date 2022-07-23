@@ -94,7 +94,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu text-left" aria-labelledby="dropdownMenuUser">
-                                @if (Modules\Gig\Models\Gig::isEnable())
+                                {{-- @if (Modules\Gig\Models\Gig::isEnable())
                                     <li>
                                         @has_permission('gig_manage')
                                         <a href="{{ route('seller.dashboard') }}">{{ __('Seller Dashboard') }}</a>
@@ -103,7 +103,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                         <a href="{{ route('buyer.orders') }}">{{ __('Gig Orders') }}</a>
                                         @end_has_permission
                                     </li>
-                                @endif
+                                @endif --}}
                                 <li class="@if (Auth::user()->hasPermission('dashboard_vendor_access')) menu-hr @endif">
                                     <a href="{{ route('user.profile.index') }}">{{ __('My profile') }}</a>
                                 </li>
@@ -120,13 +120,13 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                     <li class="menu-hr"><a
                                             href="{{ route('job.admin.allApplicants') }}">{{ __('All Applicants') }}</a>
                                     </li>
-                                    <li class="menu-hr"><a href="{{ route('user.plan') }}">{{ __('My Plans') }}</a>
-                                    </li>
-                                    <li class="menu-hr"><a href="{{ route('user.order') }}">{{ __('My Orders') }}</a>
-                                    </li>
-                                    <li class="menu-hr"><a
+                                    {{-- <li class="menu-hr"><a href="{{ route('user.plan') }}">{{ __('My Plans') }}</a>
+                                    </li> --}}
+                                    {{-- <li class="menu-hr"><a href="{{ route('user.order') }}">{{ __('My Orders') }}</a>
+                                    </li> --}}
+                                    {{-- <li class="menu-hr"><a
                                             href="{{ route('company.admin.myContact') }}">{{ __('My Contact') }}</a>
-                                    </li>
+                                    </li> --}}
                                 @endif
                                 @if (is_candidate() && !is_admin())
                                     <li class="menu-hr"><a
@@ -138,7 +138,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                         @if (is_admin())
                                             {{ __('Admin Dashboard') }}
                                         @elseif(is_candidate())
-                                            {{ __('Candidate Dashboard') }}
+                                            {{-- {{ __('Candidate Dashboard') }} --}}
                                         @else
                                             {{ __('Employer Dashboard') }}
                                         @endif

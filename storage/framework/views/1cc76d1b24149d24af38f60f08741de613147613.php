@@ -86,16 +86,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu text-left" aria-labelledby="dropdownMenuUser">
-                                <?php if(Modules\Gig\Models\Gig::isEnable()): ?>
-                                    <li>
-                                        <?php if(auth()->user()->hasPermission('gig_manage')): ?>
-                                        <a href="<?php echo e(route('seller.dashboard')); ?>"><?php echo e(__('Seller Dashboard')); ?></a>
-                                        <a href="<?php echo e(route('seller.orders')); ?>"><?php echo e(__('Gig Orders')); ?></a>
-                                    <?php else: ?>
-                                        <a href="<?php echo e(route('buyer.orders')); ?>"><?php echo e(__('Gig Orders')); ?></a>
-                                        <?php endif; ?>
-                                    </li>
-                                <?php endif; ?>
+                                
                                 <li class="<?php if(Auth::user()->hasPermission('dashboard_vendor_access')): ?> menu-hr <?php endif; ?>">
                                     <a href="<?php echo e(route('user.profile.index')); ?>"><?php echo e(__('My profile')); ?></a>
                                 </li>
@@ -112,13 +103,9 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                     <li class="menu-hr"><a
                                             href="<?php echo e(route('job.admin.allApplicants')); ?>"><?php echo e(__('All Applicants')); ?></a>
                                     </li>
-                                    <li class="menu-hr"><a href="<?php echo e(route('user.plan')); ?>"><?php echo e(__('My Plans')); ?></a>
-                                    </li>
-                                    <li class="menu-hr"><a href="<?php echo e(route('user.order')); ?>"><?php echo e(__('My Orders')); ?></a>
-                                    </li>
-                                    <li class="menu-hr"><a
-                                            href="<?php echo e(route('company.admin.myContact')); ?>"><?php echo e(__('My Contact')); ?></a>
-                                    </li>
+                                    
+                                    
+                                    
                                 <?php endif; ?>
                                 <?php if(is_candidate() && !is_admin()): ?>
                                     <li class="menu-hr"><a
@@ -131,8 +118,7 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
                                             <?php echo e(__('Admin Dashboard')); ?>
 
                                         <?php elseif(is_candidate()): ?>
-                                            <?php echo e(__('Candidate Dashboard')); ?>
-
+                                            
                                         <?php else: ?>
                                             <?php echo e(__('Employer Dashboard')); ?>
 

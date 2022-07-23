@@ -267,6 +267,54 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="panel">
+                        <div class="panel-title"><strong>{{ __('Passport Uploaded')}}</strong></div>
+                        <div class="panel-body">
+                            <div class="form-group-item">
+                                <div class="g-items-header">
+                                    <div class="row">
+                                        <div class="col-md-2">{{__("Default")}}</div>
+                                        <div class="col-md-8">{{__("Name")}}</div>
+                                        <div class="col-md-2"></div>
+                                    </div>
+                                </div>
+                                {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('passport', @$passport, 'passport') !!}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title"><strong>{{ __('Visa Uploaded')}}</strong></div>
+                        <div class="panel-body">
+                            <div class="form-group-item">
+                                <div class="g-items-header">
+                                    <div class="row">
+                                        <div class="col-md-2">{{__("Default")}}</div>
+                                        <div class="col-md-8">{{__("Name")}}</div>
+                                        <div class="col-md-2"></div>
+                                    </div>
+                                </div>
+                                {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('visa', @$visa, 'visa') !!}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-title"><strong>{{ __('Bst / CCM Uploaded')}}</strong></div>
+                        <div class="panel-body">
+                            <div class="form-group-item">
+                                <div class="g-items-header">
+                                    <div class="row">
+                                        <div class="col-md-2">{{__("Default")}}</div>
+                                        <div class="col-md-8">{{__("Name")}}</div>
+                                        <div class="col-md-2"></div>
+                                    </div>
+                                </div>
+                                {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('bst_ccm', @$bst_ccm, 'bst_ccm') !!}
+                            </div>
+                        </div>
+                    </div>
                     @endif
                 </div>
             </div>

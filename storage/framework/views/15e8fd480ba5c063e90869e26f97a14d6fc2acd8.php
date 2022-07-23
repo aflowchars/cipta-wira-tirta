@@ -21,28 +21,34 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo e(__("First name")); ?></label>
+                                        <label><?php echo e(__("Nama Depan")); ?></label>
                                         <input type="text" value="<?php echo e(old('first_name',$row->first_name)); ?>" name="first_name" placeholder="<?php echo e(__("First name")); ?>" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label><?php echo e(__("Last name")); ?></label>
+                                        <label><?php echo e(__("Nama Belakang")); ?></label>
                                         <input type="text" value="<?php echo e(old('last_name',$row->last_name)); ?>" name="last_name" placeholder="<?php echo e(__("Last name")); ?>" class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label><?php echo e(__("Phone Number")); ?></label>
+                            <label><?php echo e(__("Nomor HP (Wajib)")); ?></label>
                             <input type="text" value="<?php echo e(old('phone',$row->phone)); ?>" name="phone" placeholder="<?php echo e(__("Phone Number")); ?>" class="form-control">
                         </div>
+
                         <div class="form-group">
-                            <label><?php echo e(__("Birthday")); ?></label>
-                            <input type="text" value="<?php echo e(old('birthday',$row->birthday? display_date($row->birthday) :'')); ?>" name="birthday" placeholder="<?php echo e(__("Birthday")); ?>" class="form-control has-datepicker" autocomplete="off">
+                            <label><?php echo e(__("No KTP (Wajib)")); ?></label>
+                            <input type="text" value="<?php echo e(old('phone',$row->phone)); ?>" name="ktp" placeholder="<?php echo e(__("Nomor KTP")); ?>" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label><?php echo e(__("Tanggal Lahir (Wajib)")); ?></label>
+                            <input type="text" value="<?php echo e(old('birthday',$row->birthday? display_date($row->birthday) :'')); ?>" name="birthday" placeholder="<?php echo e(__("Tanggal Lahir (Wajib)")); ?>" class="form-control has-datepicker" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label><?php echo e(__("Biographical")); ?></label>
+                            <label><?php echo e(__("Biographical (Wajib)")); ?></label>
                             <textarea name="bio" rows="5" class="form-control"><?php echo e(strip_tags(old('bio',$row->bio))); ?></textarea>
                         </div>
                     </div>
@@ -61,22 +67,90 @@
                         </div>
                     </div>
                     <div class="panel mb-4 card-sub_information">
-                        <div class="panel-title"><strong><?php echo e(__("Location Info")); ?></strong></div>
+                        <div class="panel-title"><strong><?php echo e(__("Background Info")); ?></strong></div>
                         <div class="panel-body">
                             <?php echo $__env->make('Candidate::admin.candidate.sub_information', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
                         </div>
                     </div>
-                    <div class="card-seo-meta mb-4">
-                        <?php echo $__env->make('Core::admin.seo-meta.seo-meta',['row' => ($row->candidate ?? $candidate)], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-                    </div>
+                    
                 <?php endif; ?>
                 <div class="mb-4">
                     <button class="theme-btn btn-style-one" type="submit"><i class="fa fa-save" style="padding-right: 5px"></i> <?php echo e(__('Save Changes')); ?></button>
                 </div>
             </div>
+            
             <div class="col-lg-3">
                 <div class="panel">
-                    <div class="panel-title"><strong><?php echo e(__('Avatar')); ?></strong></div>
+                    <div class="panel-title"><strong><?php echo e(__('CV Anda (Wajib)')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('Passport')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('passport', @$passport, 'passport'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('VISA')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('visa', @$visa, 'visa'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('BST / CCM')); ?></strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2"><?php echo e(__("Default")); ?></div>
+                                    <div class="col-md-8"><?php echo e(__("Name")); ?></div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('bst_ccm', @$bst_ccm, 'bst_ccm'); ?>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="panel">
+                    <div class="panel-title"><strong><?php echo e(__('Foto Formal (Wajib)')); ?></strong></div>
                     <div class="panel-body">
                         <div class="form-group">
                             <?php echo \Modules\Media\Helpers\FileHelper::fieldUpload('avatar_id',old('avatar_id',$row->avatar_id)); ?>
@@ -138,77 +212,9 @@
                         </div>
                     </div>
 
-                    <div class="panel card-social">
-                        <div class="panel-title"><strong><?php echo e(__('Social Media')); ?></strong></div>
-                        <div class="panel-body">
-                            <?php $socialMediaData = !empty($row->candidate) ? $row->candidate->social_media : []; ?>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-skype"><i class="fab fa-skype"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[skype]" value="<?php echo e(@$socialMediaData['skype']); ?>" placeholder="<?php echo e(__('Skype')); ?>" aria-label="<?php echo e(__('Skype')); ?>" aria-describedby="social-skype">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-facebook"><i class="fab fa-facebook"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[facebook]" value="<?php echo e(@$socialMediaData['facebook']); ?>" placeholder="<?php echo e(__('Facebook')); ?>" aria-label="<?php echo e(__('Facebook')); ?>" aria-describedby="social-facebook">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-twitter"><i class="fab fa-twitter"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[twitter]" value="<?php echo e(@$socialMediaData['twitter']); ?>" placeholder="<?php echo e(__('Twitter')); ?>" aria-label="<?php echo e(__('Twitter')); ?>" aria-describedby="social-twitter">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-instagram"><i class="fab fa-instagram"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[instagram]" value="<?php echo e(@$socialMediaData['instagram']); ?>" placeholder="<?php echo e(__('Instagram')); ?>" aria-label="<?php echo e(__('Instagram')); ?>" aria-describedby="social-instagram">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-pinterest"><i class="fab fa-pinterest"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[pinterest]" value="<?php echo e(@$socialMediaData['pinterest']); ?>" placeholder="<?php echo e(__('Pinterest')); ?>" aria-label="<?php echo e(__('Pinterest')); ?>" aria-describedby="social-pinterest">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-dribbble"><i class="fab fa-dribbble"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[dribbble]" value="<?php echo e(@$socialMediaData['dribbble']); ?>" placeholder="<?php echo e(__('Dribbble')); ?>" aria-label="<?php echo e(__('Dribbble')); ?>" aria-describedby="social-dribbble">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-google"><i class="fab fa-google"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[google]" value="<?php echo e(@$socialMediaData['google']); ?>" placeholder="<?php echo e(__('Google')); ?>" aria-label="<?php echo e(__('Google')); ?>" aria-describedby="social-google">
-                            </div>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="social-google"><i class="fab fa-linkedin"></i></span>
-                                </div>
-                                <input type="text" class="form-control" name="social_media[linkedin]" value="<?php echo e(@$socialMediaData['linkedin']); ?>" placeholder="<?php echo e(__('Linkedin')); ?>" aria-label="<?php echo e(__('Linkedin')); ?>" aria-describedby="social-linkedin">
-                            </div>
-                        </div>
-                    </div>
+                    
 
-                    <div class="panel">
-                        <div class="panel-title"><strong><?php echo e(__('CV Uploaded')); ?></strong></div>
-                        <div class="panel-body">
-                            <div class="form-group-item">
-                                <div class="g-items-header">
-                                    <div class="row">
-                                        <div class="col-md-2"><?php echo e(__("Default")); ?></div>
-                                        <div class="col-md-8"><?php echo e(__("Name")); ?></div>
-                                        <div class="col-md-2"></div>
-                                    </div>
-                                </div>
-                                <?php echo \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs'); ?>
-
-                            </div>
-                        </div>
-                    </div>
+                   
                 <?php endif; ?>
                 <div class="mb-4 text-right">
                     <button class="theme-btn btn-style-one" type="submit"><i class="fa fa-save" style="padding-right: 5px"></i> <?php echo e(__('Save Changes')); ?></button>

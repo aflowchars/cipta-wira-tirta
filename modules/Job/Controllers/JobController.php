@@ -83,6 +83,9 @@ class JobController extends Controller{
             $job_related = Job::with(['location','translations', 'company', 'category', 'jobType'])->where('category_id', $category_id)->where("status","publish")->whereNotIn('id', [$row->id])->take(3)->get();
         }
         $candidate = Auth::check() ? Candidate::with('cvs')->where('id', Auth::id())->first() : false;
+        $candidate = Auth::check() ? Candidate::with('visa')->where('id', Auth::id())->first() : false;
+        $candidate = Auth::check() ? Candidate::with('passport')->where('id', Auth::id())->first() : false;
+        $candidate = Auth::check() ? Candidate::with('bst_ccm')->where('id', Auth::id())->first() : false;
         $applied = false;
         if ($candidate){
             $job_candidate = JobCandidate::query()

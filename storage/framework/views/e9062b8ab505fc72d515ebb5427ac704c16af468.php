@@ -25,6 +25,10 @@ $appliedJob = $data;
                 <input class="form-control " type="text" name="remarks" id="remarks" value="<?php echo e(old('remarks', $appliedJob->remarks)); ?>">
             </div>
             <div class="form-group">
+                <label for="source">Email</label>
+                <input class="form-control " type="text" name="email" id="email" value="<?php echo e(old('email', $user->email)); ?>">
+            </div>
+            <div class="form-group">
                 <label for="crew_code">Crew Code</label>
                 <input class="form-control " type="text" name="crew_code" id="crew_code" value="<?php echo e(old('crew_code',  $appliedJob->crew_code)); ?>">
                 
@@ -127,7 +131,11 @@ $appliedJob = $data;
             </div>
             <div class="form-group">
                 <label for="source">Experience</label>
-                <input class="form-control " type="text" name="experience" id="experience" value="<?php echo e(old('bio', $user->bio)); ?>">
+                
+                <textarea class="form-control " name="experience" id="experience" cols="30" rows="10">
+                    <?php echo old('experience', $user->bio); ?>
+
+                </textarea>
             </div>
             <div class="form-group">
                 <label for="rating_able">Application Form</label>

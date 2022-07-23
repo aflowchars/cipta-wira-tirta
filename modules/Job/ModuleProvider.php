@@ -59,13 +59,30 @@ class ModuleProvider extends ModuleServiceProvider
                     ],
                 ]
             ],
+
+            // 'job_status'=>[
+            //     'url'        => 'admin/module/job/status-applicants',
+            //     'title'      => __("Status Applicants"),
+            //     'permission' => 'job_manage',
+            //     "position" => 25,
+            //     'icon'       => 'ion-ios-briefcase'
+            // ],
+
             'job_type'=>[
                 'url'        => 'admin/module/job/all-applicants',
                 'title'      => __("All Applicants"),
                 'permission' => 'job_manage',
                 "position" => 25,
                 'icon'       => 'ion-ios-briefcase'
-            ]
+            ],
+            
+            // 'job_meeting'=>[
+            //     'url'        => 'admin/module/job/meeting-applicants',
+            //     'title'      => __("Meeting Applicants"),
+            //     'permission' => 'job_manage',
+            //     "position" => 25,
+            //     'icon'       => 'ion-ios-briefcase'
+            // ]
 
         ];
     }

@@ -8,7 +8,7 @@
         <div class="auto-container">
             <!--Widgets Section-->
             <div class="widgets-section wow fadeInUp">
-                <div class="row">
+                {{-- <div class="row">
                     @if(!empty($info_contact = clean(setting_item_with_lang('footer_info_text'))))
                         <div class="big-column col-xl-4 col-lg-3 col-md-12">
                             <div class="footer-column about-widget">
@@ -43,6 +43,29 @@
                             @endif
                         </div>
                     </div>
+                </div> --}}
+                <div class="row">
+                    <div class="big-column col-xl-12 col-lg-12 col-md-12">
+                        <div class="head-office">
+                            <h3 class="mb-2">Head Office</h3>
+                            <ul class="d-flex text-light">
+                                <li><a href="#">Jakarta</a></li>
+                                <li><a href="#">Bali</a></li>
+                                <li><a href="#">Yogyakarta</a></li>
+                                <li><a href="#">Surabaya</a></li>
+                                <li><a href="#">Bandung</a></li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="big-column col-xl-12 col-lg-12 col-md-12">
+                        <div class="social-links">
+                            {!! @clean(setting_item_with_lang('footer_socials')) !!}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,13 +73,8 @@
         <!--Bottom-->
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="outer-box">
-                    <div class="copyright-text">
-                        {!! @clean(setting_item_with_lang('copyright')) !!}
-                    </div>
-                    <div class="social-links">
-                        {!! @clean(setting_item_with_lang('footer_socials')) !!}
-                    </div>
+                <div class="copyright-text">
+                    {!! @clean(setting_item_with_lang('copyright')) !!}
                 </div>
             </div>
         </div>
@@ -66,6 +84,67 @@
     </footer>
     <!-- End Main Footer -->
 @endif
+
+<style>
+    .head-office {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .head-office h3 {
+        padding-bottom: 32px;
+        position: relative;
+        font-size: 30px;
+        line-height: 1.2em;
+        color: #fff;
+        font-weight: 500;
+    }
+
+    .head-office ul li:not(:last-child) {
+        margin-right: 16px;
+    }
+
+    .head-office ul li a {
+        color: black;
+        background: #fefefe;
+        padding: 12px 24px;
+        border-radius: 8px; 
+    }
+
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+        padding: 32px 0;
+    }
+
+    .social-links a i {
+        font-size: 18px;
+        color: white;
+    }
+
+    .main-footer.style_1 .social-links a i {
+        font-size: 18px;
+        color: #696969;
+    }
+
+    .footer-bottom .outer-box {
+        display: flex;
+        justify-items: center;
+    }
+
+    .main-footer .head-office h3 {
+        color: white;
+    }
+
+    .main-footer.style_1 .head-office h3 {
+        color: black;
+    }
+</style>
 
 @include('Layout::parts.login-register-modal')
 @include('Layout::parts.chat')

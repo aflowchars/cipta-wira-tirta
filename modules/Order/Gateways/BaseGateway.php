@@ -118,6 +118,12 @@ abstract class BaseGateway
         return get_file_url($logo_id);
     }
 
+    public function getDisplayBanner()
+    {
+        $banner_id = $this->getOption('banner_id');
+        return get_file_url($banner_id);
+    }
+
     public function getForm(){
 
     }

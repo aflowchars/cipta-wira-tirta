@@ -21,28 +21,34 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>{{__("First name")}}</label>
+                                        <label>{{__("Nama Depan")}}</label>
                                         <input type="text" value="{{old('first_name',$row->first_name)}}" name="first_name" placeholder="{{__("First name")}}" class="form-control">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label>{{__("Last name")}}</label>
+                                        <label>{{__("Nama Belakang")}}</label>
                                         <input type="text" value="{{old('last_name',$row->last_name)}}" name="last_name" placeholder="{{__("Last name")}}" class="form-control">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>{{__("Phone Number")}}</label>
+                            <label>{{__("Nomor HP (Wajib)")}}</label>
                             <input type="text" value="{{old('phone',$row->phone)}}" name="phone" placeholder="{{__("Phone Number")}}" class="form-control">
                         </div>
+
                         <div class="form-group">
-                            <label>{{__("Birthday")}}</label>
-                            <input type="text" value="{{ old('birthday',$row->birthday? display_date($row->birthday) :'') }}" name="birthday" placeholder="{{__("Birthday")}}" class="form-control has-datepicker" autocomplete="off">
+                            <label>{{__("No KTP (Wajib)")}}</label>
+                            <input type="text" value="{{old('phone',$row->phone)}}" name="ktp" placeholder="{{__("Nomor KTP")}}" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label>{{__("Tanggal Lahir (Wajib)")}}</label>
+                            <input type="text" value="{{ old('birthday',$row->birthday? display_date($row->birthday) :'') }}" name="birthday" placeholder="{{__("Tanggal Lahir (Wajib)")}}" class="form-control has-datepicker" autocomplete="off">
                         </div>
                         <div class="form-group">
-                            <label>{{__("Biographical")}}</label>
+                            <label>{{__("Biographical (Wajib)")}}</label>
                             <textarea name="bio" rows="5" class="form-control">{{ strip_tags(old('bio',$row->bio)) }}</textarea>
                         </div>
                     </div>
@@ -61,22 +67,88 @@
                         </div>
                     </div>
                     <div class="panel mb-4 card-sub_information">
-                        <div class="panel-title"><strong>{{ __("Location Info") }}</strong></div>
+                        <div class="panel-title"><strong>{{ __("Background Info") }}</strong></div>
                         <div class="panel-body">
                             @include('Candidate::admin.candidate.sub_information')
                         </div>
                     </div>
-                    <div class="card-seo-meta mb-4">
+                    {{-- <div class="card-seo-meta mb-4">
                         @include('Core::admin.seo-meta.seo-meta',['row' => ($row->candidate ?? $candidate)])
-                    </div>
+                    </div> --}}
                 @endif
                 <div class="mb-4">
                     <button class="theme-btn btn-style-one" type="submit"><i class="fa fa-save" style="padding-right: 5px"></i> {{__('Save Changes')}}</button>
                 </div>
             </div>
+            
             <div class="col-lg-3">
                 <div class="panel">
-                    <div class="panel-title"><strong>{{ __('Avatar')}}</strong></div>
+                    <div class="panel-title"><strong>{{ __('CV Anda (Wajib)')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('Passport')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('passport', @$passport, 'passport') !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('VISA')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('visa', @$visa, 'visa') !!}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('BST / CCM')}}</strong></div>
+                    <div class="panel-body">
+                        <div class="form-group-item">
+                            <div class="g-items-header">
+                                <div class="row">
+                                    <div class="col-md-2">{{__("Default")}}</div>
+                                    <div class="col-md-8">{{__("Name")}}</div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('bst_ccm', @$bst_ccm, 'bst_ccm') !!}
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="panel">
+                    <div class="panel-title"><strong>{{ __('Foto Formal (Wajib)')}}</strong></div>
                     <div class="panel-body">
                         <div class="form-group">
                             {!! \Modules\Media\Helpers\FileHelper::fieldUpload('avatar_id',old('avatar_id',$row->avatar_id)) !!}
@@ -137,7 +209,7 @@
                         </div>
                     </div>
 
-                    <div class="panel card-social">
+                    {{-- <div class="panel card-social">
                         <div class="panel-title"><strong>{{ __('Social Media')}}</strong></div>
                         <div class="panel-body">
                             <?php $socialMediaData = !empty($row->candidate) ? $row->candidate->social_media : []; ?>
@@ -190,23 +262,9 @@
                                 <input type="text" class="form-control" name="social_media[linkedin]" value="{{@$socialMediaData['linkedin']}}" placeholder="{{__('Linkedin')}}" aria-label="{{__('Linkedin')}}" aria-describedby="social-linkedin">
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
-                    <div class="panel">
-                        <div class="panel-title"><strong>{{ __('CV Uploaded')}}</strong></div>
-                        <div class="panel-body">
-                            <div class="form-group-item">
-                                <div class="g-items-header">
-                                    <div class="row">
-                                        <div class="col-md-2">{{__("Default")}}</div>
-                                        <div class="col-md-8">{{__("Name")}}</div>
-                                        <div class="col-md-2"></div>
-                                    </div>
-                                </div>
-                                {!! \Modules\Media\Helpers\FileHelper::fieldFileUpload('cvs', @$cvs, 'cvs') !!}
-                            </div>
-                        </div>
-                    </div>
+                   
                 @endif
                 <div class="mb-4 text-right">
                     <button class="theme-btn btn-style-one" type="submit"><i class="fa fa-save" style="padding-right: 5px"></i> {{__('Save Changes')}}</button>

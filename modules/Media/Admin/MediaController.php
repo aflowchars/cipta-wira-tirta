@@ -277,6 +277,27 @@ class MediaController extends Controller
                 $model->whereIn('file_extension', $ext);
                 $model2->whereIn('file_extension',$ext);
                 break;
+            case "passport":
+                $ext = [
+                    'ppt','pptx','pdf','docx','doc'
+                ];
+                $model->whereIn('file_extension', $ext);
+                $model2->whereIn('file_extension',$ext);
+                break;
+            case "visa":
+                $ext = [
+                    'ppt','pptx','pdf','docx','doc'
+                ];
+                $model->whereIn('file_extension', $ext);
+                $model2->whereIn('file_extension',$ext);
+                break;
+            case "bst_ccm":
+                $ext = [
+                    'ppt','pptx','pdf','docx','doc'
+                ];
+                $model->whereIn('file_extension', $ext);
+                $model2->whereIn('file_extension',$ext);
+                break;
         }
         if ($s) {
             $model->where('file_name', 'like', '%' . ($s) . '%');
@@ -314,6 +335,33 @@ class MediaController extends Controller
                 return "video/*";
                 break;
             case 'cvs':
+                return implode(',',[
+                    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                    'application/vnd.ms-powerpoint',
+                    'application/pdf',
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                ]);
+                break;
+            case 'passport':
+                return implode(',',[
+                    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                    'application/vnd.ms-powerpoint',
+                    'application/pdf',
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                ]);
+                break;
+            case 'visa':
+                return implode(',',[
+                    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
+                    'application/vnd.ms-powerpoint',
+                    'application/pdf',
+                    'application/msword',
+                    'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+                ]);
+                break;
+            case 'bst_ccm':
                 return implode(',',[
                     'application/vnd.openxmlformats-officedocument.presentationml.presentation',
                     'application/vnd.ms-powerpoint',

@@ -1,3 +1,9 @@
+<style>
+    .theme-btn {
+        font-size: 1rem;
+    }
+</style>
+
 <section class="call-to-action-two" @if(!empty($bg_image_url)) style="background-image: url({{ $bg_image_url ?? "" }}) !important;" @endif>
     <div class="auto-container">
         <div class="sec-title light text-center">

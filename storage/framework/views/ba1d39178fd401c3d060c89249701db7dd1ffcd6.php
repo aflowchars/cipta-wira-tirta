@@ -1,78 +1,111 @@
 <style>
-    /* ----- CSS ----- */
-    #popup {
-        display: inline-block;
-        opacity: 0;
-        position: fixed;
-        top: 5%;
-        left: 50%;
-        /* top: 0;
-        left: 0; */
-        /* width: 100%; */
-        max-height: 80vh;
-        z-index:99999;
-        padding: 1em;
-        transform: translateX(-50%);
-        background: #fff;
-        border: 1px solid #888;
-        box-shadow: 1px 1px .5em 0 rgba(0, 0, 0, .5);
-        transition: opacity .3s ease-in-out;
+    .banner-section-nine {
+        position: relative;
+        background-repeat: no-repeat;
+        height: 80vh;
     }
 
-    #popup .img {
-        cursor: pointer;
-    }
-
-    #popup.hidden {
-        display: none;
-    }
-
-    #popup.fade-in {
-        opacity: 1;
-    }
-
-    #popup .bg-close {
-        background: white;
-    }
-
-    #popup .close-popup {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 1rem;
-        height: 1rem;
-        cursor: pointer;
-    }
-
-    .popup-bg {
-        position: fixed;
+    .banner-section-nine::before {
+        content: '';
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-container {
+        background: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
         height: 100vh;
-        background: rgba(0, 0, 0, .5);
-        z-index: 99998;
+        width: 100vw;
+        z-index: 99999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* pointer-events: none; */
+        /* opacity: 0; */
+        display: none;
+    }
+
+    .modal-custom {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        max-width: 100%;
+        height: auto;
+        max-height: 80%;
+    }
+
+    .modal-image {
+        width: 600px;
+        max-width: 100%;
+        height: auto;
+        max-height: 80%;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        z-index: 9999;
+        background: #0e0e0e;
+        cursor: pointer;
+    }
+
+    .modal-close:hover {
+        background: #474747;
+    }
+    
+    .modal-close-line {
+        position: absolute;
+        top: 16px;
+        right: 8px;
+        width: 16px;
+        height: 2px;
+        background: #fefefe;
+    }
+
+    .modal-close-line.one {
+        transform: rotate(45deg);
+    }
+    .modal-close-line.two {
+        transform: rotate(-45deg);
     }
 </style>
 <section class="banner-section-nine"
     style="background-image: url(<?php if(!empty($banner_image)): ?> <?php echo e($banner_image_url); ?> <?php endif; ?>)">
     <div class="auto-container">
         <div class="cotnent-box">
-            <div id="popup-bg" class="popup-bg">
-
-            </div>
+            
             <div class="title-box wow fadeInUp" data-wow-delay='300ms'>
                 <h3><?php echo $title; ?></h3>
                 <div class="text"><?php echo e($sub_title); ?></div>
             </div>
-            <div id="popup" class="hidden">
-                <div class="bg-close">
-                    <img src="quit.png" alt='quit' class='close-popup' id='close-popup' />   
-                </div>
-                <div id="popup-img" class="img">
-                    <img src="popup.png" width="100%" height="100%" />
+
+            
+
+            <div id="modal_container" class="modal-container">
+                <div class="modal-custom">
+                    
+                    <a class="go-to" href="/job">
+                        <img class="modal-image" src="popup.png" />
+                    </a>
+                    
+                    <div id="modal_close" class="modal-close">
+                        <span class="modal-close-line one"></span>
+                        <span class="modal-close-line two"></span>
+                    </div>
                 </div>
             </div>
+
             <!-- Job Search Form -->
             
             <!-- Job Search Form -->
@@ -96,35 +129,20 @@
         </div>
     </div>
 </section>
-<script type='text/javascript'>
-    /* ----- JavaScript ----- */
-    window.onload = function() {
-        /* Cache the popup. */
-        var popup = document.getElementById("popup");
 
-        /* Show the popup. */
-        popup.classList.remove("hidden");
-
-        /* Fade the popup in */
-        setTimeout(() => popup.classList.add("fade-in"));
-
-        /* Close the popup when a city is selected. */
-        document.getElementById("popup-img").onclick = function() {
-            /* Fade the popup out */
-            popup.classList.remove("fade-in");
-
-            /* Hide the popup. */
-            popup.classList.add("hidden");
-
-            window.location.href = "job";
-        };
+<?php echo $__env->yieldContent('script.body'); ?>
+<script type="text/javascript">
+    window.onload = function () {
+        var modal_container = document.getElementById("modal_container");
+        var modal_close = document.getElementById("modal_close");
         
-        var popuBg = document.getElementById("popup-bg");
+        setTimeout((event) => {
+            modal_container.style.display = 'block';
+        }, 2000);
 
-        document.getElementById("close-popup").onclick = function() {
-            popup.classList.add("hidden");
-            popuBg.style.display = "none";
+        modal_close.onclick = function () {
+            modal_container.style.display = 'none';
         }
-    };
-</script>
-<?php /**PATH C:\laragon\www\kardusinfo\superio200\modules/Template/Views/frontend/blocks/hero-banner/style_9.blade.php ENDPATH**/ ?>
+    }
+    
+</script><?php /**PATH C:\laragon\www\kardusinfo\superio200\modules/Template/Views/frontend/blocks/hero-banner/style_9.blade.php ENDPATH**/ ?>

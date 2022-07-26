@@ -8,7 +8,7 @@
         <div class="auto-container">
             <!--Widgets Section-->
             <div class="widgets-section wow fadeInUp">
-                {{-- <div class="row">
+                <div class="row">
                     @if(!empty($info_contact = clean(setting_item_with_lang('footer_info_text'))))
                         <div class="big-column col-xl-4 col-lg-3 col-md-12">
                             <div class="footer-column about-widget">
@@ -26,9 +26,9 @@
                             </div>
                         </div>
                     @endif
-                    <div class="big-column col-xl-8 col-lg-9 col-md-12">
+                    <div class="big-column head-social-links col-xl-8 col-lg-9 col-md-12">
                         <div class="row">
-                            @if($list_widget_footers = setting_item_with_lang("list_widget_footer"))
+                            {{-- @if($list_widget_footers = setting_item_with_lang("list_widget_footer"))
                                 <?php $list_widget_footers = json_decode($list_widget_footers);?>
                                 @foreach($list_widget_footers as $key=>$item)
                                     <div class="footer-column col-lg-{{$item->size ?? '3'}} col-md-6 col-sm-12">
@@ -40,11 +40,28 @@
                                         </div>
                                     </div>
                                 @endforeach
-                            @endif
+                            @endif --}}
+                            <div class="head-office">
+                                <h3 class="mb-2">Head Office</h3>
+                                <ul class="d-flex text-light">
+                                    <li><a href="#">Jakarta</a></li>
+                                    <li><a href="#">Bali</a></li>
+                                    <li><a href="#">Yogyakarta</a></li>
+                                    <li><a href="#">Surabaya</a></li>
+                                    <li><a href="#">Bandung</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="big-column col-xl-12 col-lg-12 col-md-12">
+                                <div class="social-links">
+                                    {!! @clean(setting_item_with_lang('footer_socials')) !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div> --}}
-                <div class="row">
+                </div>
+                {{-- <div class="row">
                     <div class="big-column col-xl-12 col-lg-12 col-md-12">
                         <div class="head-office">
                             <h3 class="mb-2">Head Office</h3>
@@ -56,7 +73,6 @@
                                 <li><a href="#">Bandung</a></li>
                             </ul>
                         </div>
-                        
                     </div>
                 </div>
 
@@ -66,7 +82,7 @@
                             {!! @clean(setting_item_with_lang('footer_socials')) !!}
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 
@@ -86,11 +102,18 @@
 @endif
 
 <style>
+    .head-social-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-items: center;
+    }
+
     .head-office {
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        align-items: center;
+        justify-items: flex-start;
+        align-items: flex-start;
     }
 
     .head-office h3 {
@@ -111,6 +134,36 @@
         background: #fefefe;
         padding: 12px 24px;
         border-radius: 8px; 
+    }
+
+    @media only screen and (max-width: 600px) {
+        .head-office {
+            padding: 0 1rem;
+        }
+        .head-office ul {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .head-office ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .head-office ul li a {
+            color: black;
+            background: #fefefe;
+            padding: 8px 16px;
+            border-radius: 8px; 
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .head-office {
+            padding: 0 1rem;
+        }
+        .social-links {
+            padding: 0 1rem;
+        }
     }
 
     .social-links {

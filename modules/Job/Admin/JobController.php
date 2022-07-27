@@ -334,7 +334,7 @@ class JobController extends AdminController
         }
 
         $old_status = $row->status;
-        if($status != 'approved' && $status != 'rejected'){
+        if($status != 'approved' && $status != 'rejected' && $status != 'profile_completed' && $status != 'pending'){
             return redirect()->back()->with('error', __('Status unavailable'));
         }
 

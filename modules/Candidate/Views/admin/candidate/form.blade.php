@@ -2,7 +2,7 @@
         $candidate = $row->candidate;
     @endphp
     <div class="row">
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <div class="form-group">
                 <label>{{__("Title")}}</label>
                 <input type="text" value="{{old('title',@$candidate->title)}}" name="title" placeholder="{{__("Title")}}" class="form-control">
@@ -51,9 +51,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="col-md-6">
+        {{-- <div class="col-md-6">
             <div class="form-group">
                 <label for="education_level">{{__("Education Level")}}</label>
                 <select class="form-control" id="education_level" name="education_level">
@@ -66,6 +66,31 @@
                     <option value="professional" @if(old('education_level',@$candidate->education_level) == 'professional') selected @endif >{{ __("Professional") }}</option>
                 </select>
             </div>
+        </div> --}}
+
+        <div class="form-group">
+            <label for="education_level">{{__("Kantor CWT Mendaftar")}}</label>
+            <select class="form-control" id="education_level" name="education_level">
+                <option value="" @if(old('education_level',@$candidate->education_level) == '') selected @endif >{{ __("Select") }}</option>
+                <option value="certificate" @if(old('education_level',@$candidate->education_level) == 'Jakarta') selected @endif >{{ __("Jakarta") }}</option>
+                <option value="diploma" @if(old('education_level',@$candidate->education_level) == 'Bali') selected @endif >{{ __("Bali") }}</option>
+                <option value="associate" @if(old('education_level',@$candidate->education_level) == 'Yogyakarta') selected @endif >{{ __("Yogyakarta") }}</option>
+                <option value="bachelor" @if(old('education_level',@$candidate->education_level) == 'Surabaya') selected @endif >{{ __("Surabaya") }}</option>
+                <option value="master" @if(old('education_level',@$candidate->education_level) == 'Bandung') selected @endif >{{ __("Bandung") }}</option>
+                {{-- <option value="professional" @if(old('education_level',@$candidate->education_level) == 'professional') selected @endif >{{ __("Professional") }}</option> --}}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">{{ __('Gender') }}</label>
+            <select class="form-control" id="gender" name="gender">
+                <option value="" @if (old('gender', @$candidate->gender) == '') selected @endif>
+                    {{ __('Select') }}</option>
+                <option value="male" @if (old('gender', @$candidate->gender) == 'male') selected @endif>
+                    {{ __('Male') }}</option>
+                <option value="female" @if (old('gender', @$candidate->gender) == 'female') selected @endif>
+                    {{ __('Female') }}</option>
+            </select>
         </div>
 
         <div class="col-md-6">

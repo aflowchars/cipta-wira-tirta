@@ -92,7 +92,7 @@
 
             {{-- <div id="popup" class="hidden">
                 <div class="bg-close">
-                    <img src="quit.png" alt='quit' class='close-popup' id='close-popup' />   
+                    <img src="quit.png" alt='quit' class='close-popup' id='close-popup' />
                 </div>
                 <div id="popup-img" class="img">
                     <img src="popup.png" />
@@ -102,9 +102,15 @@
             <div id="modal_container" class="modal-container">
                 <div class="modal-custom">
                     {{-- Image --}}
-                    <a class="go-to" href="/job">
+                    {{-- <a class="go-to" href="/job">
                         <img class="modal-image" src="popup.png" />
-                    </a>
+                    </a> --}}
+                    @if ($logo_id = setting_item('banner_id'))
+                        @php $logo = get_file_url($logo_id,'full') @endphp
+                        <img src="{{ $logo }}">
+                    @else
+                        <img src="{{ asset('/popup.png') }}" alt="logo">
+                    @endif
                     {{-- Close --}}
                     <div id="modal_close" class="modal-close">
                         <span class="modal-close-line one"></span>

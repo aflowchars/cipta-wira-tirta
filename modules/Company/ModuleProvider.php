@@ -64,7 +64,7 @@ class ModuleProvider extends ModuleServiceProvider
                         ],
                         'company_category'=>[
                             'url'        => route('company.admin.category.index'),
-                            'title'      => __("Category"),
+                            'title'      => __("Ship"),
                             'permission' => 'employer_manage_others'
                         ]
                     ]

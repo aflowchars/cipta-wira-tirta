@@ -294,9 +294,10 @@ class UserController extends FrontendController
                // 'last_name'  => $request->input('last_name'),
                 'name' => $request->input('email'),
                 'email'      => $request->input('email'),
+                'slug'      => $request->input('email'),
                 'password'   => Hash::make($request->input('password')),
                 'status'    => $request->input('publish','publish'),
-               // 'phone'    => $request->input('phone'),
+                'phone'    => $request->input('phone'),
             ]);
             event(new Registered($user));
             Auth::loginUsingId($user->id);

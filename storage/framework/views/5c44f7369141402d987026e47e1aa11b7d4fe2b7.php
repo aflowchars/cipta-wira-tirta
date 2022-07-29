@@ -14,7 +14,7 @@
                             <div class="footer-column about-widget">
                                 <?php
                                     $logo_id = setting_item("logo_id");
-                                    if($footer_style == 'style-two' || $footer_style == 'style-six') $logo_id = setting_item("logo_white_id");;
+                                    // if($footer_style == 'style-two' || $footer_style == 'style-six') $logo_id = setting_item("logo_white_id");;
                                     $logo = get_file_url($logo_id,'full');
                                 ?>
                                 <div class="logo">

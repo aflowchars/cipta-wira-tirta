@@ -31,8 +31,8 @@
     <link href="<?php echo e(asset('libs/select2/css/select2.min.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('libs/flags/css/flag-icon.min.css')); ?>" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo e(url('libs/daterange/daterangepicker.css')); ?>"/>
-    <link href="<?php echo e(asset('/dist/frontend/css/vendors.css')); ?>" rel="stylesheet">
-    <link href="<?php echo e(asset('/dist/frontend/css/app.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('dist/admin/css/vendors.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('dist/admin/css/app.css')); ?>" rel="stylesheet">
     <?php echo \App\Helpers\Assets::css(); ?>
 
     <?php echo \App\Helpers\Assets::js(); ?>

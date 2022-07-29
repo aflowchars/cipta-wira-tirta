@@ -31,8 +31,8 @@
     <link href="{{ asset('libs/select2/css/select2.min.css') }}" rel="stylesheet">
     <link href="{{ asset('libs/flags/css/flag-icon.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{url('libs/daterange/daterangepicker.css')}}"/>
-    <link href="{{ asset('dist/frontend/css/vendors.css') }}" rel="stylesheet">
-    <link href="{{ asset('dist/frontend/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/admin/css/vendors.css') }}" rel="stylesheet">
+    <link href="{{ asset('dist/admin/css/app.css') }}" rel="stylesheet">
     {!! \App\Helpers\Assets::css() !!}
     {!! \App\Helpers\Assets::js() !!}
     <script>

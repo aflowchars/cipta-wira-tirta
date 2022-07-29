@@ -95,9 +95,13 @@
             <div id="modal_container" class="modal-container">
                 <div class="modal-custom">
                     
-                    <a class="go-to" href="/job">
-                        <img class="modal-image" src="popup.png" />
-                    </a>
+                    
+                    <?php if($logo_id = setting_item('banner_id')): ?>
+                        <?php $logo = get_file_url($logo_id,'full') ?>
+                        <img src="<?php echo e($logo); ?>">
+                    <?php else: ?>
+                        <img src="<?php echo e(asset('/popup.png')); ?>" alt="logo">
+                    <?php endif; ?>
                     
                     <div id="modal_close" class="modal-close">
                         <span class="modal-close-line one"></span>

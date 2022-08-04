@@ -1,8 +1,17 @@
 <?php if(is_candidate() && !empty($candidate)): ?>
     <div class="model bc-model" id="apply-job">
         <!-- Apply Job modal -->
-        <div id="apply-job-modal">
+        <div id="apply-job-modal" class="apply-job-modal">
             <!-- Apply Job Form -->
+            <?php if(Auth::user()->phone == '' || Auth::user()->birthday == ''|| Auth::user()->bio == '' ||Auth::user()->avatar_id == ''): ?>
+            <?php
+            // echo Auth::user()->phone;
+            // echo Auth::user()->birthday;
+            // echo Auth::user()->country;
+            ?>                    
+            <a href="/user/profile"
+                                    class="theme-btn btn-style-one bc-call-modal"><?php echo e(__('Lengkapi Profil Anda sebelum Apply')); ?></a>
+                            <?php else: ?>
             <div class="apply-job-form default-form">
                 <div class="form-inner">
                     <h3 class="form-title text-center"><?php echo e(__("Apply for this job")); ?></h3>
@@ -75,7 +84,16 @@
                     </form>
                 </div>
             </div>
+            <?php endif; ?>
         </div>
     </div>
 <?php endif; ?>
-<?php /**PATH /home/forkomdi/ciptawiratirta.com/modules/Job/Views/frontend/layouts/details/apply-job-popup.blade.php ENDPATH**/ ?>
+
+<style>
+    .model .apply-job-modal {
+        display:  flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+</style><?php /**PATH /home/forkomdi/ciptawiratirta.com/modules/Job/Views/frontend/layouts/details/apply-job-popup.blade.php ENDPATH**/ ?>

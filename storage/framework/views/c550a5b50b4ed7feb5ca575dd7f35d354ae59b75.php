@@ -130,7 +130,11 @@ $appliedJob = $data;
             </div>
             <div class="form-group">
                 <label for="source">Experience</label>
-                <input class="form-control " type="text" name="experience" id="experience" value="<?php echo e(old('bio', $user->bio)); ?>">
+                
+                <textarea class="form-control " name="experience" id="experience" cols="30" rows="10">
+                    <?php echo old('experience', $user->bio); ?>
+
+                </textarea>
             </div>
             <div class="form-group">
                 <label for="rating_able">Application Form</label>

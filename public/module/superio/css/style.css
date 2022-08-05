@@ -7838,6 +7838,13 @@ Job Detail Section
     padding-right: 30px;
 }
 
+@media screen and (max-width: 600px) {
+    .job-detail ul {
+        width: 0 !important;
+        min-width: 350px !important;
+    }
+  }
+
 .candidate-detail-section.style-three .job-detail {
     padding-right: 0;
     padding-left: 20px;

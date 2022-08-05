@@ -9,7 +9,7 @@
             // echo Auth::user()->birthday;
             // echo Auth::user()->country;
             ?>                    
-            <a href="javascript:void(0)"
+            <a href="/user/profile"
                                     class="theme-btn btn-style-one bc-call-modal"><?php echo e(__('Lengkapi Profil Anda sebelum Apply')); ?></a>
                             <?php else: ?>
             <div class="apply-job-form default-form">

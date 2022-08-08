@@ -12,13 +12,8 @@
         </div>
 
         <div class="btn-box">
-            <?php if(!empty($link_search)): ?>
-                <a href="<?php echo e($url_search); ?>" class="theme-btn btn-style-three"><?php echo e($link_search); ?></a>
-            <?php endif; ?>
-            <?php if(!empty($link_apply)): ?>
-                <a href="<?php echo e($url_apply); ?>" class="theme-btn btn-style-two"><?php echo e($link_apply); ?></a>
-            <?php endif; ?>
-
+            
+            <a href="<?php echo e($url_apply); ?>" class="theme-btn  btn-style-three">Find Jobs</a>
             <a href="<?php echo e($url_apply); ?>" class="theme-btn btn-style-two">Recruitment Procudure</a>
         </div>
     </div>

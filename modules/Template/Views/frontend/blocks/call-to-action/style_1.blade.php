@@ -12,13 +12,13 @@
         </div>
 
         <div class="btn-box">
-            @if(!empty($link_search))
+            {{-- @if(!empty($link_search))
                 <a href="{{$url_search}}" class="theme-btn btn-style-three">{{$link_search}}</a>
             @endif
             @if(!empty($link_apply))
                 <a href="{{$url_apply}}" class="theme-btn btn-style-two">{{$link_apply}}</a>
-            @endif
-
+            @endif --}}
+            <a href="{{$url_apply}}" class="theme-btn  btn-style-three">Find Jobs</a>
             <a href="{{$url_apply}}" class="theme-btn btn-style-two">Recruitment Procudure</a>
         </div>
     </div>

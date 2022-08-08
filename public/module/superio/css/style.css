@@ -7838,6 +7838,13 @@ Job Detail Section
     padding-right: 30px;
 }
 
+@media screen and (max-width: 600px) {
+    .job-detail ul {
+        width: 0 !important;
+        min-width: 350px !important;
+    }
+  }
+
 .candidate-detail-section.style-three .job-detail {
     padding-right: 0;
     padding-left: 20px;
@@ -15824,6 +15831,11 @@ TNC Section
     font-size: 16px !important;
 }
 
+.tnc-section .blog-content ul li {
+    font-family: "Sofia Pro" !important;
+    font-size: 16px !important;
+}
+
 .tnc-section p {
     font-size: 16px;
     line-height: 24px;
@@ -17060,7 +17072,7 @@ Main Footer / Style Six
 .main-footer.style-six .list li a,
 .main-footer.style-six .address,
 .main-footer.style-six .address a {
-    color: #cad1d8;
+    color: #fff;
 }
 
 .main-footer.style-six .social-links a:hover {
@@ -17102,7 +17114,11 @@ Main Footer / Style Six
     padding: 30px 0 50px;
     font-size: 14px;
     line-height: 24px;
-    color: #696969;
+    color: #fff;
+}
+
+.copyright-text p {
+    color: #fff !important;
 }
 
 /***

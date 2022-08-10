@@ -2750,6 +2750,7 @@ Main Header
     top: 0;
     width: 100%;
     height: auto;
+    /* background: #051650; */
     z-index: 99;
     -webkit-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -3173,6 +3174,14 @@ Main Header
     -webkit-box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
     box-shadow: 0px 6px 15px rgba(64, 79, 104, 0.05);
     border-bottom: 1px solid #ecedf2;
+}
+
+.main-header.header-style-two.header-shaddow .main-box .nav-outer .nav.main-menu ul li a{
+    color: #051650 !important;
+}
+
+.main-header.header-style-two.header-shaddow.fixed-header.animated.slideInDown .main-box .nav-outer .nav.main-menu ul li a{
+    color: #fff !important;
 }
 
 .main-header.alternate3 {

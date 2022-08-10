@@ -11,13 +11,17 @@
 @endif
 
 @php
+
 $header_class = $header_style = $row->header_style ?? 'normal';
 $logo_id = setting_item('logo_id');
+$logo_white_id = setting_item('logo_white_id');
+
 if ($header_style == 'header-style-two') {
     $logo_id = setting_item('logo_white_id');
 }
+
 if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow)) {
-    $header_class .= ' header-shaddow';
+    $header_class = ' header-shaddow';
 }
 
 @endphp
@@ -25,20 +29,38 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
     <!-- Header Span -->
     <span class="header-span"></span>
 @endif
+
 <!-- Main Header-->
-<header class="main-header {{ $header_class }}">
+<header class="main-header header-style-two {{ $header_class }}">
+{{-- <header class="main-header header-style-two fixed-header animated slideInDown"> --}}
     <!-- Main box -->
     <div class="main-box">
         <!--Nav Outer -->
         <div class="nav-outer">
             <div class="logo-box">
                 <div class="logo">
-                    <a href="{{ home_url() }}">
+                    <a href="{{ home_url() }}" class="logo_1" style="display: block">
                         @if ($logo_id)
                             @php $logo = get_file_url($logo_id,'full') @endphp
                             <img src="{{ $logo }}" alt="{{ setting_item('site_title') }}">
                         @else
                             <img src="{{ asset('/images/logo.svg') }}" alt="logo">
+                            {{-- @php $logo_white = get_file_url($logo_white_id,'full') @endphp --}}
+                            {{-- @php $logo_white_id = setting_item('logo_white_id'); @endphp --}}
+
+                            {{-- <img src="{{ $logo_white_id }}" alt="{{ setting_item('site_title') }}"> --}}
+                        @endif
+                    </a>
+                    <a href="{{ home_url() }}" class="logo_2" style="display: none">
+                        @if ($logo_white_id)
+                            @php $logo2 = get_file_url($logo_white_id,'full') @endphp
+                            <img src="{{ $logo2 }}" alt="{{ setting_item('site_title') }}">
+                        @else
+                            <img src="{{ asset('/images/logo.svg') }}" alt="logo">
+                            {{-- @php $logo_white = get_file_url($logo_white_id,'full') @endphp --}}
+                            {{-- @php $logo_white_id = setting_item('logo_white_id'); @endphp --}}
+
+                            {{-- <img src="{{ $logo_white_id }}" alt="{{ setting_item('site_title') }}"> --}}
                         @endif
                     </a>
                 </div>
@@ -169,8 +191,8 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
     <div class="mobile-header">
         <div class="logo">
             <a href="{{ url(app_get_locale(false, '/')) }}">
-                @if ($logo_id = setting_item('logo_id'))
-                    @php $logo = get_file_url($logo_id,'full') @endphp
+                @if ($logo= setting_item('logo_id'))
+                    @php $logo = get_file_url($logo,'full') @endphp
                     <img src="{{ $logo }}" alt="{{ setting_item('site_title') }}">
                 @else
                     <img src="{{ asset('/images/logo.svg') }}" alt="logo">
@@ -249,3 +271,31 @@ if (empty($is_home) && $header_style == 'normal' && empty($disable_header_shadow
     <div id="nav-mobile"></div>
 </header>
 <!--End Main Header -->
+
+@section('footer')
+<script>
+    const headerStyleTwo = document.getElementsByClassName('slideInDown');
+    
+    $(window).on('scroll', function() {
+        if ($('.slideInDown').length > 0) {
+            $('.logo_2').show();
+            $('.logo_1').hide();
+            $('.nav.main-menu ul .depth-1 a').attr('style', 'color:#051650 !important');
+            // console.log($('#id_logo').val())
+        }else{
+            $('.logo_2').hide();
+            $('.logo_1').show();
+            $('.nav.main-menu ul .depth-1 a').attr('style', 'color:#051650 !important');
+
+            // $('.logo_1').hide();
+            // console.log($('#id_logo_two').val())
+        }
+});
+</script>
+@endsection
+
+<style>
+    .depth-1 a {
+        color: black !important;
+    }
+</style>

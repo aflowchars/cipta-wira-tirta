@@ -23,7 +23,15 @@
                                         <img src="{{ $logo }}" alt="logo footer">
                                     </a>
                                 </div>
-                                {!! clean($info_contact) !!}
+                                {{-- {!! clean($info_contact) !!} --}}
+                                <div class="row">
+                                    <div class="big-column force-left col-xl-12 col-lg-12 col-md-12">
+                                        <h5>Social Media</h5>
+                                        <div class="social-links">
+                                            {!! @clean(setting_item_with_lang('footer_socials')) !!}
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     @endif
@@ -53,13 +61,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="row">
+                        {{-- <div class="row">
                             <div class="big-column col-xl-12 col-lg-12 col-md-12">
                                 <div class="social-links">
                                     {!! @clean(setting_item_with_lang('footer_socials')) !!}
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 {{-- <div class="row">
@@ -173,7 +181,7 @@
         justify-items: center;
         justify-content: center;
         align-items: center;
-        padding: 32px 0;
+        padding: 1.5rem 0;
     }
 
     .social-links a i {
@@ -197,6 +205,19 @@
 
     .main-footer.style_1 .head-office h3 {
         color: black;
+    }
+
+    .force-left {
+        padding: 0 1.5rem;
+    }
+
+    .force-left .social-links{
+        justify-content: left;
+        padding-left: 4px;
+    }
+
+    .force-left h5 {
+        color: white;
     }
 </style>
 
